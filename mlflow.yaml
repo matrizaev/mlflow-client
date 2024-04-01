@@ -1,0 +1,1230 @@
+openapi: 3.0.3
+info:
+  title: Mlflow
+  version: v2.11.3
+servers:
+- url: http://localhost:5000/api
+paths:
+  /2.0/mlflow/experiments/create:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                artifact_location:
+                  type: string
+                tags:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowexperimenttag'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  experiment_id:
+                    type: string
+  /2.0/mlflow/experiments/search:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                max_results:
+                  type: integer
+                  format: int64
+                page_token:
+                  type: string
+                filter:
+                  type: string
+                order_by:
+                  type: array
+                  items:
+                    type: string
+                view_type:
+                  $ref: '#/components/schemas/mlflowviewtype'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  experiments:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowexperiment'
+                  next_page_token:
+                    type: string
+  /2.0/mlflow/experiments/get:
+    get:
+      parameters:
+      - in: query
+        name: experiment_id
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  experiment:
+                    $ref: '#/components/schemas/mlflowexperiment'
+  /2.0/mlflow/experiments/get-by-name:
+    get:
+      parameters:
+      - in: query
+        name: experiment_name
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  experiment:
+                    $ref: '#/components/schemas/mlflowexperiment'
+  /2.0/mlflow/experiments/delete:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                experiment_id:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/experiments/restore:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                experiment_id:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/experiments/update:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                experiment_id:
+                  type: string
+                new_name:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/create:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                experiment_id:
+                  type: string
+                user_id:
+                  type: string
+                run_name:
+                  type: string
+                start_time:
+                  type: integer
+                  format: int64
+                tags:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowruntag'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  run:
+                    $ref: '#/components/schemas/mlflowrun'
+  /2.0/mlflow/runs/delete:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/restore:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/get:
+    get:
+      parameters:
+      - in: query
+        name: run_id
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: run_uuid
+        schema:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  run:
+                    $ref: '#/components/schemas/mlflowrun'
+  /2.0/mlflow/runs/log-metric:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                run_uuid:
+                  type: string
+                key:
+                  type: string
+                value:
+                  type: number
+                timestamp:
+                  type: integer
+                  format: int64
+                step:
+                  type: integer
+                  format: int64
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/log-batch:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                metrics:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowmetric'
+                params:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowparam'
+                tags:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowruntag'
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/log-model:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                model_json:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/log-inputs:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                datasets:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowdatasetinput'
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/experiments/set-experiment-tag:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                experiment_id:
+                  type: string
+                key:
+                  type: string
+                value:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/set-tag:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                run_uuid:
+                  type: string
+                key:
+                  type: string
+                value:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/delete-tag:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                key:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/runs/log-parameter:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                run_uuid:
+                  type: string
+                key:
+                  type: string
+                value:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/metrics/get-history:
+    get:
+      parameters:
+      - in: query
+        name: run_id
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: run_uuid
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: metric_key
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: page_token
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: max_results
+        schema:
+          type: integer
+          format: int32
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  metrics:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowmetric'
+                  next_page_token:
+                    type: string
+  /2.0/mlflow/runs/search:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                experiment_ids:
+                  type: array
+                  items:
+                    type: string
+                filter:
+                  type: string
+                run_view_type:
+                  $ref: '#/components/schemas/mlflowviewtype'
+                max_results:
+                  type: integer
+                  format: int32
+                order_by:
+                  type: array
+                  items:
+                    type: string
+                page_token:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  runs:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowrun'
+                  next_page_token:
+                    type: string
+  /2.0/mlflow/artifacts/list:
+    get:
+      parameters:
+      - in: query
+        name: run_id
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: run_uuid
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: path
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: page_token
+        schema:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  root_uri:
+                    type: string
+                  files:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowfileinfo'
+                  next_page_token:
+                    type: string
+  /2.0/mlflow/runs/update:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                run_id:
+                  type: string
+                run_uuid:
+                  type: string
+                status:
+                  $ref: '#/components/schemas/mlflowrunstatus'
+                end_time:
+                  type: integer
+                  format: int64
+                run_name:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  run_info:
+                    $ref: '#/components/schemas/mlflowruninfo'
+  /2.0/mlflow/registered-models/create:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                tags:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowregisteredmodeltag'
+                description:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  registered_model:
+                    $ref: '#/components/schemas/mlflowregisteredmodel'
+  /2.0/mlflow/registered-models/get:
+    get:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  registered_model:
+                    $ref: '#/components/schemas/mlflowregisteredmodel'
+  /2.0/mlflow/registered-models/rename:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                new_name:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  registered_model:
+                    $ref: '#/components/schemas/mlflowregisteredmodel'
+  /2.0/mlflow/registered-models/update:
+    patch:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: description
+        schema:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  registered_model:
+                    $ref: '#/components/schemas/mlflowregisteredmodel'
+  /2.0/mlflow/registered-models/delete:
+    delete:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/registered-models/get-latest-versions:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                stages:
+                  type: array
+                  items:
+                    type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  model_versions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowmodelversion'
+  /2.0/mlflow/model-versions/create:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                source:
+                  type: string
+                run_id:
+                  type: string
+                tags:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/mlflowmodelversiontag'
+                run_link:
+                  type: string
+                description:
+                  type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  model_version:
+                    $ref: '#/components/schemas/mlflowmodelversion'
+  /2.0/mlflow/model-versions/get:
+    get:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: version
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  model_version:
+                    $ref: '#/components/schemas/mlflowmodelversion'
+  /2.0/mlflow/model-versions/update:
+    patch:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: version
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: description
+        schema:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  model_version:
+                    $ref: '#/components/schemas/mlflowmodelversion'
+  /2.0/mlflow/model-versions/delete:
+    delete:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: version
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/model-versions/search:
+    get:
+      parameters:
+      - in: query
+        name: filter
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: max_results
+        schema:
+          type: integer
+          format: int64
+        required: false
+      - in: query
+        name: order_by
+        schema:
+          type: array
+          items:
+            type: string
+        required: false
+      - in: query
+        name: page_token
+        schema:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  model_versions:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowmodelversion'
+                  next_page_token:
+                    type: string
+  /2.0/mlflow/model-versions/get-download-uri:
+    get:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: version
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  artifact_uri:
+                    type: string
+  /2.0/mlflow/model-versions/transition-stage:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                version:
+                  type: string
+                stage:
+                  type: string
+                archive_existing_versions:
+                  type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  model_version:
+                    $ref: '#/components/schemas/mlflowmodelversion'
+  /2.0/mlflow/registered-models/search:
+    get:
+      parameters:
+      - in: query
+        name: filter
+        schema:
+          type: string
+        required: false
+      - in: query
+        name: max_results
+        schema:
+          type: integer
+          format: int64
+        required: false
+      - in: query
+        name: order_by
+        schema:
+          type: array
+          items:
+            type: string
+        required: false
+      - in: query
+        name: page_token
+        schema:
+          type: string
+        required: false
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  registered_models:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/mlflowregisteredmodel'
+                  next_page_token:
+                    type: string
+  /2.0/mlflow/registered-models/set-tag:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                key:
+                  type: string
+                value:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/model-versions/set-tag:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                version:
+                  type: string
+                key:
+                  type: string
+                value:
+                  type: string
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/registered-models/delete-tag:
+    delete:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: key
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/model-versions/delete-tag:
+    delete:
+      parameters:
+      - in: query
+        name: name
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: version
+        schema:
+          type: string
+        required: true
+      - in: query
+        name: key
+        schema:
+          type: string
+        required: true
+      responses:
+        '200':
+          description: OK
+  /2.0/mlflow/registered-models/alias:
+    post:
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                alias:
+                  type: string
+                version:
+                  type: string
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    mlflowdataset:
+      type: object
+      properties:
+        name:
+          type: string
+        digest:
+          type: string
+        source_type:
+          type: string
+        source:
+          type: string
+        schema:
+          type: string
+        profile:
+          type: string
+    mlflowdatasetinput:
+      type: object
+      properties:
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowinputtag'
+        dataset:
+          $ref: '#/components/schemas/mlflowdataset'
+    mlflowexperiment:
+      type: object
+      properties:
+        experiment_id:
+          type: string
+        name:
+          type: string
+        artifact_location:
+          type: string
+        lifecycle_stage:
+          type: string
+        last_update_time:
+          type: integer
+          format: int64
+        creation_time:
+          type: integer
+          format: int64
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowexperimenttag'
+    mlflowexperimenttag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    mlflowfileinfo:
+      type: object
+      properties:
+        path:
+          type: string
+        is_dir:
+          type: boolean
+        file_size:
+          type: integer
+          format: int64
+    mlflowinputtag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    mlflowmetric:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: number
+        timestamp:
+          type: integer
+          format: int64
+        step:
+          type: integer
+          format: int64
+    mlflowmodelversion:
+      type: object
+      properties:
+        name:
+          type: string
+        version:
+          type: string
+        creation_timestamp:
+          type: integer
+          format: int64
+        last_updated_timestamp:
+          type: integer
+          format: int64
+        user_id:
+          type: string
+        current_stage:
+          type: string
+        description:
+          type: string
+        source:
+          type: string
+        run_id:
+          type: string
+        status:
+          $ref: '#/components/schemas/mlflowmodelversionstatus'
+        status_message:
+          type: string
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowmodelversiontag'
+        run_link:
+          type: string
+        aliases:
+          type: array
+          items:
+            type: string
+    mlflowmodelversiontag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    mlflowparam:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    mlflowregisteredmodel:
+      type: object
+      properties:
+        name:
+          type: string
+        creation_timestamp:
+          type: integer
+          format: int64
+        last_updated_timestamp:
+          type: integer
+          format: int64
+        user_id:
+          type: string
+        description:
+          type: string
+        latest_versions:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowmodelversion'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowregisteredmodeltag'
+        aliases:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowregisteredmodelalias'
+    mlflowregisteredmodelalias:
+      type: object
+      properties:
+        alias:
+          type: string
+        version:
+          type: string
+    mlflowregisteredmodeltag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    mlflowrun:
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/mlflowruninfo'
+        data:
+          $ref: '#/components/schemas/mlflowrundata'
+        inputs:
+          $ref: '#/components/schemas/mlflowruninputs'
+    mlflowrundata:
+      type: object
+      properties:
+        metrics:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowmetric'
+        params:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowparam'
+        tags:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowruntag'
+    mlflowruninfo:
+      type: object
+      properties:
+        run_id:
+          type: string
+        run_uuid:
+          type: string
+        run_name:
+          type: string
+        experiment_id:
+          type: string
+        user_id:
+          type: string
+        status:
+          $ref: '#/components/schemas/mlflowrunstatus'
+        start_time:
+          type: integer
+          format: int64
+        end_time:
+          type: integer
+          format: int64
+        artifact_uri:
+          type: string
+        lifecycle_stage:
+          type: string
+    mlflowruninputs:
+      type: object
+      properties:
+        dataset_inputs:
+          type: array
+          items:
+            $ref: '#/components/schemas/mlflowdatasetinput'
+    mlflowruntag:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    mlflowmodelversionstatus:
+      type: string
+      enum:
+      - PENDING_REGISTRATION
+      - FAILED_REGISTRATION
+      - READY
+    mlflowrunstatus:
+      type: string
+      enum:
+      - RUNNING
+      - SCHEDULED
+      - FINISHED
+      - FAILED
+      - KILLED
+    mlflowviewtype:
+      type: string
+      enum:
+      - ACTIVE_ONLY
+      - DELETED_ONLY
+      - ALL

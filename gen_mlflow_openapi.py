@@ -145,7 +145,7 @@ def main(mlflow_version: str = "v2.11.3", output_file: str = "mlflow.yaml") -> N
                         "in": "query",
                         "name": prop["Field Name"],
                         "schema": prop["Type"],
-                        "required": "required" in prop["Description"],
+                        "required": prop["required"],
                         "description": prop["Description"],
                     }
                     for prop in service_def["request"].to_dict(orient="records")

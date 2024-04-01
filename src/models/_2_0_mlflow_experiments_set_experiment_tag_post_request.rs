@@ -12,20 +12,23 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowExperimentsSetExperimentTagPostRequest {
-    #[serde(rename = "experiment_id", skip_serializing_if = "Option::is_none")]
-    pub experiment_id: Option<String>,
-    #[serde(rename = "key", skip_serializing_if = "Option::is_none")]
-    pub key: Option<String>,
-    #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
-    pub value: Option<String>,
+    /// ID of the experiment under which to log the tag. Must be provided. This field is required.
+    #[serde(rename = "experiment_id")]
+    pub experiment_id: String,
+    /// Name of the tag. Maximum size depends on storage backend. All storage backends are guaranteed to support key values up to 250 bytes in size. This field is required.
+    #[serde(rename = "key")]
+    pub key: String,
+    /// String value of the tag being logged. Maximum size depends on storage backend. All storage backends are guaranteed to support key values up to 5000 bytes in size. This field is required.
+    #[serde(rename = "value")]
+    pub value: String,
 }
 
 impl Model20MlflowExperimentsSetExperimentTagPostRequest {
-    pub fn new() -> Model20MlflowExperimentsSetExperimentTagPostRequest {
+    pub fn new(experiment_id: String, key: String, value: String) -> Model20MlflowExperimentsSetExperimentTagPostRequest {
         Model20MlflowExperimentsSetExperimentTagPostRequest {
-            experiment_id: None,
-            key: None,
-            value: None,
+            experiment_id,
+            key,
+            value,
         }
     }
 }

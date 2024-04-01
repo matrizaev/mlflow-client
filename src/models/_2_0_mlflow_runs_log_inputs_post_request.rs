@@ -12,16 +12,18 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRunsLogInputsPostRequest {
-    #[serde(rename = "run_id", skip_serializing_if = "Option::is_none")]
-    pub run_id: Option<String>,
+    /// ID of the run to log under This field is required.
+    #[serde(rename = "run_id")]
+    pub run_id: String,
+    /// Dataset inputs
     #[serde(rename = "datasets", skip_serializing_if = "Option::is_none")]
     pub datasets: Option<Vec<models::Mlflowdatasetinput>>,
 }
 
 impl Model20MlflowRunsLogInputsPostRequest {
-    pub fn new() -> Model20MlflowRunsLogInputsPostRequest {
+    pub fn new(run_id: String) -> Model20MlflowRunsLogInputsPostRequest {
         Model20MlflowRunsLogInputsPostRequest {
-            run_id: None,
+            run_id,
             datasets: None,
         }
     }

@@ -63,6 +63,9 @@ def markdown_table_to_dataframe(lines, part_checkpoint):
     if "Type" in df.columns:
         df["Type"] = df["Type"].apply(convert_prop_type)
 
+    if "Description" in df.columns:
+        df["required"] = df["Description"].apply(lambda x: "required" in x)
+
     return df
 
 
@@ -113,20 +116,26 @@ def main(mlflow_version: str = "v2.11.3", output_file: str = "mlflow.yaml") -> N
     for service, service_def in services.items():
         endpoint_path = "/" + service_def["endpoint"]["Endpoint"][1].replace("`", "")
         endpoint_method = service_def["endpoint"]["HTTP Method"][1].replace("`", "").lower()
+        request = service_def["request"]
         if endpoint_method == "post":
+            required = request[request["required"].isin([True])]["Field Name"].to_list()
+            required_params = {"required": required} if required else {}
             request_schema = {
                 "requestBody": {
+                    "required": bool(required),
+                    "description": "Request body",
                     "content": {
                         "application/json": {
                             "schema": {
                                 "type": "object",
                                 "properties": {
-                                    prop["Field Name"]: prop["Type"]
-                                    for prop in service_def["request"].to_dict(orient="records")
+                                    prop["Field Name"]: {**prop["Type"], "description": prop["Description"]}
+                                    for prop in request.to_dict(orient="records")
                                 },
-                            }
+                                **required_params,
+                            },
                         }
-                    }
+                    },
                 }
             }
         else:
@@ -137,6 +146,7 @@ def main(mlflow_version: str = "v2.11.3", output_file: str = "mlflow.yaml") -> N
                         "name": prop["Field Name"],
                         "schema": prop["Type"],
                         "required": "required" in prop["Description"],
+                        "description": prop["Description"],
                     }
                     for prop in service_def["request"].to_dict(orient="records")
                 ]
@@ -148,7 +158,7 @@ def main(mlflow_version: str = "v2.11.3", output_file: str = "mlflow.yaml") -> N
                         "schema": {
                             "type": "object",
                             "properties": {
-                                prop["Field Name"]: prop["Type"]
+                                prop["Field Name"]: {**prop["Type"], "description": prop["Description"]}
                                 for prop in service_def["response"].to_dict(orient="records")
                             },
                         }
@@ -174,7 +184,7 @@ def main(mlflow_version: str = "v2.11.3", output_file: str = "mlflow.yaml") -> N
             schema_def = {"type": "string", "enum": list(structure_def["schema"]["Name"].unique())}
         open_api_spec["components"]["schemas"][structure] = schema_def
 
-    with open(output_file, "w") as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         f.write(yaml.dump(open_api_spec, sort_keys=False))
 
 

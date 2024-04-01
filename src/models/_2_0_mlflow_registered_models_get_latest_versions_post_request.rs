@@ -12,16 +12,18 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRegisteredModelsGetLatestVersionsPostRequest {
-    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
+    /// Registered model unique name identifier. This field is required.
+    #[serde(rename = "name")]
+    pub name: String,
+    /// List of stages.
     #[serde(rename = "stages", skip_serializing_if = "Option::is_none")]
     pub stages: Option<Vec<String>>,
 }
 
 impl Model20MlflowRegisteredModelsGetLatestVersionsPostRequest {
-    pub fn new() -> Model20MlflowRegisteredModelsGetLatestVersionsPostRequest {
+    pub fn new(name: String) -> Model20MlflowRegisteredModelsGetLatestVersionsPostRequest {
         Model20MlflowRegisteredModelsGetLatestVersionsPostRequest {
-            name: None,
+            name,
             stages: None,
         }
     }

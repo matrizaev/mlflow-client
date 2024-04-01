@@ -12,23 +12,27 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowModelVersionsSetTagPostRequest {
-    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
-    #[serde(rename = "version", skip_serializing_if = "Option::is_none")]
-    pub version: Option<String>,
-    #[serde(rename = "key", skip_serializing_if = "Option::is_none")]
-    pub key: Option<String>,
-    #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
-    pub value: Option<String>,
+    /// Unique name of the model. This field is required.
+    #[serde(rename = "name")]
+    pub name: String,
+    /// Model version number. This field is required.
+    #[serde(rename = "version")]
+    pub version: String,
+    /// Name of the tag. Maximum size depends on storage backend. If a tag with this name already exists, its preexisting value will be replaced by the specified `value`. All storage backends are guaranteed to support key values up to 250 bytes in size. This field is required.
+    #[serde(rename = "key")]
+    pub key: String,
+    /// String value of the tag being logged. Maximum size depends on storage backend. This field is required.
+    #[serde(rename = "value")]
+    pub value: String,
 }
 
 impl Model20MlflowModelVersionsSetTagPostRequest {
-    pub fn new() -> Model20MlflowModelVersionsSetTagPostRequest {
+    pub fn new(name: String, version: String, key: String, value: String) -> Model20MlflowModelVersionsSetTagPostRequest {
         Model20MlflowModelVersionsSetTagPostRequest {
-            name: None,
-            version: None,
-            key: None,
-            value: None,
+            name,
+            version,
+            key,
+            value,
         }
     }
 }

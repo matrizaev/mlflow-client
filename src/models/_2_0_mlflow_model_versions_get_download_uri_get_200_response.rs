@@ -12,6 +12,7 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowModelVersionsGetDownloadUriGet200Response {
+    /// URI corresponding to where artifacts for this model version are stored.
     #[serde(rename = "artifact_uri", skip_serializing_if = "Option::is_none")]
     pub artifact_uri: Option<String>,
 }

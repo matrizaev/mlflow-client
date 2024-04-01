@@ -12,17 +12,19 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRunsDeleteTagPostRequest {
-    #[serde(rename = "run_id", skip_serializing_if = "Option::is_none")]
-    pub run_id: Option<String>,
-    #[serde(rename = "key", skip_serializing_if = "Option::is_none")]
-    pub key: Option<String>,
+    /// ID of the run that the tag was logged under. Must be provided. This field is required.
+    #[serde(rename = "run_id")]
+    pub run_id: String,
+    /// Name of the tag. Maximum size is 255 bytes. Must be provided. This field is required.
+    #[serde(rename = "key")]
+    pub key: String,
 }
 
 impl Model20MlflowRunsDeleteTagPostRequest {
-    pub fn new() -> Model20MlflowRunsDeleteTagPostRequest {
+    pub fn new(run_id: String, key: String) -> Model20MlflowRunsDeleteTagPostRequest {
         Model20MlflowRunsDeleteTagPostRequest {
-            run_id: None,
-            key: None,
+            run_id,
+            key,
         }
     }
 }

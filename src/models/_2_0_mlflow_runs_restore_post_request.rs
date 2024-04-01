@@ -11,15 +11,15 @@
 use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Model20MlflowRunsDeletePostRequest {
-    /// ID of the run to delete. This field is required.
+pub struct Model20MlflowRunsRestorePostRequest {
+    /// ID of the run to restore. This field is required.
     #[serde(rename = "run_id")]
     pub run_id: String,
 }
 
-impl Model20MlflowRunsDeletePostRequest {
-    pub fn new(run_id: String) -> Model20MlflowRunsDeletePostRequest {
-        Model20MlflowRunsDeletePostRequest {
+impl Model20MlflowRunsRestorePostRequest {
+    pub fn new(run_id: String) -> Model20MlflowRunsRestorePostRequest {
+        Model20MlflowRunsRestorePostRequest {
             run_id,
         }
     }

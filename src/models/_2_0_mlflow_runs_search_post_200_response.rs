@@ -12,8 +12,10 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRunsSearchPost200Response {
+    /// Runs that match the search criteria.
     #[serde(rename = "runs", skip_serializing_if = "Option::is_none")]
     pub runs: Option<Vec<models::Mlflowrun>>,
+    /// 
     #[serde(rename = "next_page_token", skip_serializing_if = "Option::is_none")]
     pub next_page_token: Option<String>,
 }

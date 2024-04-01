@@ -349,7 +349,7 @@ pub async fn call_20_mlflow_artifacts_list_get(configuration: &configuration::Co
     }
 }
 
-pub async fn call_20_mlflow_experiments_create_post(configuration: &configuration::Configuration, model20_mlflow_experiments_create_post_request: Option<models::Model20MlflowExperimentsCreatePostRequest>) -> Result<models::Model20MlflowExperimentsCreatePost200Response, Error<Call20MlflowExperimentsCreatePostError>> {
+pub async fn call_20_mlflow_experiments_create_post(configuration: &configuration::Configuration, model20_mlflow_experiments_create_post_request: models::Model20MlflowExperimentsCreatePostRequest) -> Result<models::Model20MlflowExperimentsCreatePost200Response, Error<Call20MlflowExperimentsCreatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -377,7 +377,7 @@ pub async fn call_20_mlflow_experiments_create_post(configuration: &configuratio
     }
 }
 
-pub async fn call_20_mlflow_experiments_delete_post(configuration: &configuration::Configuration, model20_mlflow_experiments_create_post200_response: Option<models::Model20MlflowExperimentsCreatePost200Response>) -> Result<(), Error<Call20MlflowExperimentsDeletePostError>> {
+pub async fn call_20_mlflow_experiments_delete_post(configuration: &configuration::Configuration, model20_mlflow_experiments_delete_post_request: models::Model20MlflowExperimentsDeletePostRequest) -> Result<(), Error<Call20MlflowExperimentsDeletePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -388,7 +388,7 @@ pub async fn call_20_mlflow_experiments_delete_post(configuration: &configuratio
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_create_post200_response);
+    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_delete_post_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -461,7 +461,7 @@ pub async fn call_20_mlflow_experiments_get_get(configuration: &configuration::C
     }
 }
 
-pub async fn call_20_mlflow_experiments_restore_post(configuration: &configuration::Configuration, model20_mlflow_experiments_create_post200_response: Option<models::Model20MlflowExperimentsCreatePost200Response>) -> Result<(), Error<Call20MlflowExperimentsRestorePostError>> {
+pub async fn call_20_mlflow_experiments_restore_post(configuration: &configuration::Configuration, model20_mlflow_experiments_delete_post_request: models::Model20MlflowExperimentsDeletePostRequest) -> Result<(), Error<Call20MlflowExperimentsRestorePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -472,7 +472,7 @@ pub async fn call_20_mlflow_experiments_restore_post(configuration: &configurati
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_create_post200_response);
+    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_delete_post_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -517,7 +517,7 @@ pub async fn call_20_mlflow_experiments_search_post(configuration: &configuratio
     }
 }
 
-pub async fn call_20_mlflow_experiments_set_experiment_tag_post(configuration: &configuration::Configuration, model20_mlflow_experiments_set_experiment_tag_post_request: Option<models::Model20MlflowExperimentsSetExperimentTagPostRequest>) -> Result<(), Error<Call20MlflowExperimentsSetExperimentTagPostError>> {
+pub async fn call_20_mlflow_experiments_set_experiment_tag_post(configuration: &configuration::Configuration, model20_mlflow_experiments_set_experiment_tag_post_request: models::Model20MlflowExperimentsSetExperimentTagPostRequest) -> Result<(), Error<Call20MlflowExperimentsSetExperimentTagPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -545,7 +545,7 @@ pub async fn call_20_mlflow_experiments_set_experiment_tag_post(configuration: &
     }
 }
 
-pub async fn call_20_mlflow_experiments_update_post(configuration: &configuration::Configuration, model20_mlflow_experiments_update_post_request: Option<models::Model20MlflowExperimentsUpdatePostRequest>) -> Result<(), Error<Call20MlflowExperimentsUpdatePostError>> {
+pub async fn call_20_mlflow_experiments_update_post(configuration: &configuration::Configuration, model20_mlflow_experiments_update_post_request: models::Model20MlflowExperimentsUpdatePostRequest) -> Result<(), Error<Call20MlflowExperimentsUpdatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -613,7 +613,7 @@ pub async fn call_20_mlflow_metrics_get_history_get(configuration: &configuratio
     }
 }
 
-pub async fn call_20_mlflow_model_versions_create_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_create_post_request: Option<models::Model20MlflowModelVersionsCreatePostRequest>) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsCreatePostError>> {
+pub async fn call_20_mlflow_model_versions_create_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_create_post_request: models::Model20MlflowModelVersionsCreatePostRequest) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsCreatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -800,7 +800,7 @@ pub async fn call_20_mlflow_model_versions_search_get(configuration: &configurat
     }
 }
 
-pub async fn call_20_mlflow_model_versions_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_set_tag_post_request: Option<models::Model20MlflowModelVersionsSetTagPostRequest>) -> Result<(), Error<Call20MlflowModelVersionsSetTagPostError>> {
+pub async fn call_20_mlflow_model_versions_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_set_tag_post_request: models::Model20MlflowModelVersionsSetTagPostRequest) -> Result<(), Error<Call20MlflowModelVersionsSetTagPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -828,7 +828,7 @@ pub async fn call_20_mlflow_model_versions_set_tag_post(configuration: &configur
     }
 }
 
-pub async fn call_20_mlflow_model_versions_transition_stage_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_transition_stage_post_request: Option<models::Model20MlflowModelVersionsTransitionStagePostRequest>) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsTransitionStagePostError>> {
+pub async fn call_20_mlflow_model_versions_transition_stage_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_transition_stage_post_request: models::Model20MlflowModelVersionsTransitionStagePostRequest) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsTransitionStagePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -888,7 +888,7 @@ pub async fn call_20_mlflow_model_versions_update_patch(configuration: &configur
     }
 }
 
-pub async fn call_20_mlflow_registered_models_alias_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_alias_post_request: Option<models::Model20MlflowRegisteredModelsAliasPostRequest>) -> Result<(), Error<Call20MlflowRegisteredModelsAliasPostError>> {
+pub async fn call_20_mlflow_registered_models_alias_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_alias_post_request: models::Model20MlflowRegisteredModelsAliasPostRequest) -> Result<(), Error<Call20MlflowRegisteredModelsAliasPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -916,7 +916,7 @@ pub async fn call_20_mlflow_registered_models_alias_post(configuration: &configu
     }
 }
 
-pub async fn call_20_mlflow_registered_models_create_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_create_post_request: Option<models::Model20MlflowRegisteredModelsCreatePostRequest>) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsCreatePostError>> {
+pub async fn call_20_mlflow_registered_models_create_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_create_post_request: models::Model20MlflowRegisteredModelsCreatePostRequest) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsCreatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1029,7 +1029,7 @@ pub async fn call_20_mlflow_registered_models_get_get(configuration: &configurat
     }
 }
 
-pub async fn call_20_mlflow_registered_models_get_latest_versions_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_get_latest_versions_post_request: Option<models::Model20MlflowRegisteredModelsGetLatestVersionsPostRequest>) -> Result<models::Model20MlflowRegisteredModelsGetLatestVersionsPost200Response, Error<Call20MlflowRegisteredModelsGetLatestVersionsPostError>> {
+pub async fn call_20_mlflow_registered_models_get_latest_versions_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_get_latest_versions_post_request: models::Model20MlflowRegisteredModelsGetLatestVersionsPostRequest) -> Result<models::Model20MlflowRegisteredModelsGetLatestVersionsPost200Response, Error<Call20MlflowRegisteredModelsGetLatestVersionsPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1057,7 +1057,7 @@ pub async fn call_20_mlflow_registered_models_get_latest_versions_post(configura
     }
 }
 
-pub async fn call_20_mlflow_registered_models_rename_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_rename_post_request: Option<models::Model20MlflowRegisteredModelsRenamePostRequest>) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsRenamePostError>> {
+pub async fn call_20_mlflow_registered_models_rename_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_rename_post_request: models::Model20MlflowRegisteredModelsRenamePostRequest) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsRenamePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1127,7 +1127,7 @@ pub async fn call_20_mlflow_registered_models_search_get(configuration: &configu
     }
 }
 
-pub async fn call_20_mlflow_registered_models_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_set_tag_post_request: Option<models::Model20MlflowRegisteredModelsSetTagPostRequest>) -> Result<(), Error<Call20MlflowRegisteredModelsSetTagPostError>> {
+pub async fn call_20_mlflow_registered_models_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_set_tag_post_request: models::Model20MlflowRegisteredModelsSetTagPostRequest) -> Result<(), Error<Call20MlflowRegisteredModelsSetTagPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1214,7 +1214,7 @@ pub async fn call_20_mlflow_runs_create_post(configuration: &configuration::Conf
     }
 }
 
-pub async fn call_20_mlflow_runs_delete_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_post_request: Option<models::Model20MlflowRunsDeletePostRequest>) -> Result<(), Error<Call20MlflowRunsDeletePostError>> {
+pub async fn call_20_mlflow_runs_delete_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_post_request: models::Model20MlflowRunsDeletePostRequest) -> Result<(), Error<Call20MlflowRunsDeletePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1242,7 +1242,7 @@ pub async fn call_20_mlflow_runs_delete_post(configuration: &configuration::Conf
     }
 }
 
-pub async fn call_20_mlflow_runs_delete_tag_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_tag_post_request: Option<models::Model20MlflowRunsDeleteTagPostRequest>) -> Result<(), Error<Call20MlflowRunsDeleteTagPostError>> {
+pub async fn call_20_mlflow_runs_delete_tag_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_tag_post_request: models::Model20MlflowRunsDeleteTagPostRequest) -> Result<(), Error<Call20MlflowRunsDeleteTagPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1331,7 +1331,7 @@ pub async fn call_20_mlflow_runs_log_batch_post(configuration: &configuration::C
     }
 }
 
-pub async fn call_20_mlflow_runs_log_inputs_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_inputs_post_request: Option<models::Model20MlflowRunsLogInputsPostRequest>) -> Result<(), Error<Call20MlflowRunsLogInputsPostError>> {
+pub async fn call_20_mlflow_runs_log_inputs_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_inputs_post_request: models::Model20MlflowRunsLogInputsPostRequest) -> Result<(), Error<Call20MlflowRunsLogInputsPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1359,7 +1359,7 @@ pub async fn call_20_mlflow_runs_log_inputs_post(configuration: &configuration::
     }
 }
 
-pub async fn call_20_mlflow_runs_log_metric_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_metric_post_request: Option<models::Model20MlflowRunsLogMetricPostRequest>) -> Result<(), Error<Call20MlflowRunsLogMetricPostError>> {
+pub async fn call_20_mlflow_runs_log_metric_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_metric_post_request: models::Model20MlflowRunsLogMetricPostRequest) -> Result<(), Error<Call20MlflowRunsLogMetricPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1415,7 +1415,7 @@ pub async fn call_20_mlflow_runs_log_model_post(configuration: &configuration::C
     }
 }
 
-pub async fn call_20_mlflow_runs_log_parameter_post(configuration: &configuration::Configuration, model20_mlflow_runs_set_tag_post_request: Option<models::Model20MlflowRunsSetTagPostRequest>) -> Result<(), Error<Call20MlflowRunsLogParameterPostError>> {
+pub async fn call_20_mlflow_runs_log_parameter_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_parameter_post_request: models::Model20MlflowRunsLogParameterPostRequest) -> Result<(), Error<Call20MlflowRunsLogParameterPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1426,7 +1426,7 @@ pub async fn call_20_mlflow_runs_log_parameter_post(configuration: &configuratio
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_set_tag_post_request);
+    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_log_parameter_post_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -1443,7 +1443,7 @@ pub async fn call_20_mlflow_runs_log_parameter_post(configuration: &configuratio
     }
 }
 
-pub async fn call_20_mlflow_runs_restore_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_post_request: Option<models::Model20MlflowRunsDeletePostRequest>) -> Result<(), Error<Call20MlflowRunsRestorePostError>> {
+pub async fn call_20_mlflow_runs_restore_post(configuration: &configuration::Configuration, model20_mlflow_runs_restore_post_request: models::Model20MlflowRunsRestorePostRequest) -> Result<(), Error<Call20MlflowRunsRestorePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1454,7 +1454,7 @@ pub async fn call_20_mlflow_runs_restore_post(configuration: &configuration::Con
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_delete_post_request);
+    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_restore_post_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -1499,7 +1499,7 @@ pub async fn call_20_mlflow_runs_search_post(configuration: &configuration::Conf
     }
 }
 
-pub async fn call_20_mlflow_runs_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_runs_set_tag_post_request: Option<models::Model20MlflowRunsSetTagPostRequest>) -> Result<(), Error<Call20MlflowRunsSetTagPostError>> {
+pub async fn call_20_mlflow_runs_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_runs_set_tag_post_request: models::Model20MlflowRunsSetTagPostRequest) -> Result<(), Error<Call20MlflowRunsSetTagPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

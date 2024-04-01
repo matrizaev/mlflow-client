@@ -12,8 +12,10 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRegisteredModelsSearchGet200Response {
+    /// Registered Models that match the search criteria.
     #[serde(rename = "registered_models", skip_serializing_if = "Option::is_none")]
     pub registered_models: Option<Vec<models::Mlflowregisteredmodel>>,
+    /// Pagination token to request the next page of models.
     #[serde(rename = "next_page_token", skip_serializing_if = "Option::is_none")]
     pub next_page_token: Option<String>,
 }

@@ -12,8 +12,10 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowModelVersionsSearchGet200Response {
+    /// Models that match the search criteria
     #[serde(rename = "model_versions", skip_serializing_if = "Option::is_none")]
     pub model_versions: Option<Vec<models::Mlflowmodelversion>>,
+    /// Pagination token to request next page of models for the same search query.
     #[serde(rename = "next_page_token", skip_serializing_if = "Option::is_none")]
     pub next_page_token: Option<String>,
 }

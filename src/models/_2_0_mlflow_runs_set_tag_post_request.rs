@@ -12,23 +12,27 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRunsSetTagPostRequest {
+    /// ID of the run under which to log the tag. Must be provided.
     #[serde(rename = "run_id", skip_serializing_if = "Option::is_none")]
     pub run_id: Option<String>,
+    /// [Deprecated, use run_id instead] ID of the run under which to log the tag. This field will be removed in a future MLflow version.
     #[serde(rename = "run_uuid", skip_serializing_if = "Option::is_none")]
     pub run_uuid: Option<String>,
-    #[serde(rename = "key", skip_serializing_if = "Option::is_none")]
-    pub key: Option<String>,
-    #[serde(rename = "value", skip_serializing_if = "Option::is_none")]
-    pub value: Option<String>,
+    /// Name of the tag. Maximum size depends on storage backend. All storage backends are guaranteed to support key values up to 250 bytes in size. This field is required.
+    #[serde(rename = "key")]
+    pub key: String,
+    /// String value of the tag being logged. Maximum size depends on storage backend. All storage backends are guaranteed to support key values up to 5000 bytes in size. This field is required.
+    #[serde(rename = "value")]
+    pub value: String,
 }
 
 impl Model20MlflowRunsSetTagPostRequest {
-    pub fn new() -> Model20MlflowRunsSetTagPostRequest {
+    pub fn new(key: String, value: String) -> Model20MlflowRunsSetTagPostRequest {
         Model20MlflowRunsSetTagPostRequest {
             run_id: None,
             run_uuid: None,
-            key: None,
-            value: None,
+            key,
+            value,
         }
     }
 }

@@ -59,10 +59,10 @@ Method | HTTP request | Description
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**run_id** | Option<**String**> |  |  |
-**run_uuid** | Option<**String**> |  |  |
-**path** | Option<**String**> |  |  |
-**page_token** | Option<**String**> |  |  |
+**run_id** | Option<**String**> | ID of the run whose artifacts to list. Must be provided. |  |
+**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run whose artifacts to list. This field will be removed in a future MLflow version. |  |
+**path** | Option<**String**> | Filter artifacts matching this path (a relative path from the root artifact directory). |  |
+**page_token** | Option<**String**> | Token indicating the page of artifact results to fetch |  |
 
 ### Return type
 
@@ -90,7 +90,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_create_post_request** | Option<[**Model20MlflowExperimentsCreatePostRequest**](Model20MlflowExperimentsCreatePostRequest.md)> |  |  |
+**model20_mlflow_experiments_create_post_request** | [**Model20MlflowExperimentsCreatePostRequest**](Model20MlflowExperimentsCreatePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -110,7 +110,7 @@ No authorization required
 
 ## call_20_mlflow_experiments_delete_post
 
-> call_20_mlflow_experiments_delete_post(model20_mlflow_experiments_create_post200_response)
+> call_20_mlflow_experiments_delete_post(model20_mlflow_experiments_delete_post_request)
 
 
 ### Parameters
@@ -118,7 +118,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_create_post200_response** | Option<[**Model20MlflowExperimentsCreatePost200Response**](Model20MlflowExperimentsCreatePost200Response.md)> |  |  |
+**model20_mlflow_experiments_delete_post_request** | [**Model20MlflowExperimentsDeletePostRequest**](Model20MlflowExperimentsDeletePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -146,7 +146,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**experiment_name** | **String** |  | [required] |
+**experiment_name** | **String** | Name of the associated experiment. This field is required. | [required] |
 
 ### Return type
 
@@ -174,7 +174,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**experiment_id** | **String** |  | [required] |
+**experiment_id** | **String** | ID of the associated experiment. This field is required. | [required] |
 
 ### Return type
 
@@ -194,7 +194,7 @@ No authorization required
 
 ## call_20_mlflow_experiments_restore_post
 
-> call_20_mlflow_experiments_restore_post(model20_mlflow_experiments_create_post200_response)
+> call_20_mlflow_experiments_restore_post(model20_mlflow_experiments_delete_post_request)
 
 
 ### Parameters
@@ -202,7 +202,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_create_post200_response** | Option<[**Model20MlflowExperimentsCreatePost200Response**](Model20MlflowExperimentsCreatePost200Response.md)> |  |  |
+**model20_mlflow_experiments_delete_post_request** | [**Model20MlflowExperimentsDeletePostRequest**](Model20MlflowExperimentsDeletePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -230,7 +230,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_search_post_request** | Option<[**Model20MlflowExperimentsSearchPostRequest**](Model20MlflowExperimentsSearchPostRequest.md)> |  |  |
+**model20_mlflow_experiments_search_post_request** | Option<[**Model20MlflowExperimentsSearchPostRequest**](Model20MlflowExperimentsSearchPostRequest.md)> | Request body |  |
 
 ### Return type
 
@@ -258,7 +258,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_set_experiment_tag_post_request** | Option<[**Model20MlflowExperimentsSetExperimentTagPostRequest**](Model20MlflowExperimentsSetExperimentTagPostRequest.md)> |  |  |
+**model20_mlflow_experiments_set_experiment_tag_post_request** | [**Model20MlflowExperimentsSetExperimentTagPostRequest**](Model20MlflowExperimentsSetExperimentTagPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -286,7 +286,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_update_post_request** | Option<[**Model20MlflowExperimentsUpdatePostRequest**](Model20MlflowExperimentsUpdatePostRequest.md)> |  |  |
+**model20_mlflow_experiments_update_post_request** | [**Model20MlflowExperimentsUpdatePostRequest**](Model20MlflowExperimentsUpdatePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -314,11 +314,11 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**metric_key** | **String** |  | [required] |
-**run_id** | Option<**String**> |  |  |
-**run_uuid** | Option<**String**> |  |  |
-**page_token** | Option<**String**> |  |  |
-**max_results** | Option<**i32**> |  |  |
+**metric_key** | **String** | Name of the metric. This field is required. | [required] |
+**run_id** | Option<**String**> | ID of the run from which to fetch metric values. Must be provided. |  |
+**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run from which to fetch metric values. This field will be removed in a future MLflow version. |  |
+**page_token** | Option<**String**> | Token indicating the page of metric history to fetch |  |
+**max_results** | Option<**i32**> | Maximum number of logged instances of a metric for a run to return per call. Backend servers may restrict the value of `max_results` depending on performance requirements. Requests that do not specify this value will behave as non-paginated queries where all metric history values for a given metric within a run are returned in a single response. |  |
 
 ### Return type
 
@@ -346,7 +346,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_model_versions_create_post_request** | Option<[**Model20MlflowModelVersionsCreatePostRequest**](Model20MlflowModelVersionsCreatePostRequest.md)> |  |  |
+**model20_mlflow_model_versions_create_post_request** | [**Model20MlflowModelVersionsCreatePostRequest**](Model20MlflowModelVersionsCreatePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -374,8 +374,8 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**version** | **String** |  | [required] |
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
 
 ### Return type
 
@@ -403,9 +403,9 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**version** | **String** |  | [required] |
-**key** | **String** |  | [required] |
+**name** | **String** | Name of the registered model that the tag was logged under. This field is required. | [required] |
+**version** | **String** | Model version number that the tag was logged under. This field is required. | [required] |
+**key** | **String** | Name of the tag. The name must be an exact match; wild-card deletion is not supported. Maximum size is 250 bytes. This field is required. | [required] |
 
 ### Return type
 
@@ -433,8 +433,8 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**version** | **String** |  | [required] |
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
 
 ### Return type
 
@@ -462,8 +462,8 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**version** | **String** |  | [required] |
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
 
 ### Return type
 
@@ -491,10 +491,10 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**filter** | Option<**String**> |  |  |
-**max_results** | Option<**i64**> |  |  |
-**order_by** | Option<[**Vec<String>**](String.md)> |  |  |
-**page_token** | Option<**String**> |  |  |
+**filter** | Option<**String**> | String filter condition, like \"name='my-model-name'\". Must be a single boolean condition, with string values wrapped in single quotes. |  |
+**max_results** | Option<**i64**> | Maximum number of models desired. Max threshold is 200K. Backends may choose a lower default value and maximum threshold. |  |
+**order_by** | Option<[**Vec<String>**](String.md)> | List of columns to be ordered by including model name, version, stage with an optional \"DESC\" or \"ASC\" annotation, where \"ASC\" is the default. Tiebreaks are done by latest stage transition timestamp, followed by name ASC, followed by version DESC. |  |
+**page_token** | Option<**String**> | Pagination token to go to next page based on previous search query. |  |
 
 ### Return type
 
@@ -522,7 +522,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_model_versions_set_tag_post_request** | Option<[**Model20MlflowModelVersionsSetTagPostRequest**](Model20MlflowModelVersionsSetTagPostRequest.md)> |  |  |
+**model20_mlflow_model_versions_set_tag_post_request** | [**Model20MlflowModelVersionsSetTagPostRequest**](Model20MlflowModelVersionsSetTagPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -550,7 +550,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_model_versions_transition_stage_post_request** | Option<[**Model20MlflowModelVersionsTransitionStagePostRequest**](Model20MlflowModelVersionsTransitionStagePostRequest.md)> |  |  |
+**model20_mlflow_model_versions_transition_stage_post_request** | [**Model20MlflowModelVersionsTransitionStagePostRequest**](Model20MlflowModelVersionsTransitionStagePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -578,9 +578,9 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**version** | **String** |  | [required] |
-**description** | Option<**String**> |  |  |
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
+**description** | Option<**String**> | If provided, updates the description for this ``registered_model``. |  |
 
 ### Return type
 
@@ -608,7 +608,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_alias_post_request** | Option<[**Model20MlflowRegisteredModelsAliasPostRequest**](Model20MlflowRegisteredModelsAliasPostRequest.md)> |  |  |
+**model20_mlflow_registered_models_alias_post_request** | [**Model20MlflowRegisteredModelsAliasPostRequest**](Model20MlflowRegisteredModelsAliasPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -636,7 +636,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_create_post_request** | Option<[**Model20MlflowRegisteredModelsCreatePostRequest**](Model20MlflowRegisteredModelsCreatePostRequest.md)> |  |  |
+**model20_mlflow_registered_models_create_post_request** | [**Model20MlflowRegisteredModelsCreatePostRequest**](Model20MlflowRegisteredModelsCreatePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -664,7 +664,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
+**name** | **String** | Registered model unique name identifier. This field is required. | [required] |
 
 ### Return type
 
@@ -692,8 +692,8 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**key** | **String** |  | [required] |
+**name** | **String** | Name of the registered model that the tag was logged under. This field is required. | [required] |
+**key** | **String** | Name of the tag. The name must be an exact match; wild-card deletion is not supported. Maximum size is 250 bytes. This field is required. | [required] |
 
 ### Return type
 
@@ -721,7 +721,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
+**name** | **String** | Registered model unique name identifier. This field is required. | [required] |
 
 ### Return type
 
@@ -749,7 +749,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_get_latest_versions_post_request** | Option<[**Model20MlflowRegisteredModelsGetLatestVersionsPostRequest**](Model20MlflowRegisteredModelsGetLatestVersionsPostRequest.md)> |  |  |
+**model20_mlflow_registered_models_get_latest_versions_post_request** | [**Model20MlflowRegisteredModelsGetLatestVersionsPostRequest**](Model20MlflowRegisteredModelsGetLatestVersionsPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -777,7 +777,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_rename_post_request** | Option<[**Model20MlflowRegisteredModelsRenamePostRequest**](Model20MlflowRegisteredModelsRenamePostRequest.md)> |  |  |
+**model20_mlflow_registered_models_rename_post_request** | [**Model20MlflowRegisteredModelsRenamePostRequest**](Model20MlflowRegisteredModelsRenamePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -805,10 +805,10 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**filter** | Option<**String**> |  |  |
-**max_results** | Option<**i64**> |  |  |
-**order_by** | Option<[**Vec<String>**](String.md)> |  |  |
-**page_token** | Option<**String**> |  |  |
+**filter** | Option<**String**> | String filter condition, like \"name LIKE 'my-model-name'\". Interpreted in the backend automatically as \"name LIKE '%my-model-name%'\". Single boolean condition, with string values wrapped in single quotes. |  |
+**max_results** | Option<**i64**> | Maximum number of models desired. Default is 100. Max threshold is 1000. |  |
+**order_by** | Option<[**Vec<String>**](String.md)> | List of columns for ordering search results, which can include model name and last updated timestamp with an optional \"DESC\" or \"ASC\" annotation, where \"ASC\" is the default. Tiebreaks are done by model name ASC. |  |
+**page_token** | Option<**String**> | Pagination token to go to the next page based on a previous search query. |  |
 
 ### Return type
 
@@ -836,7 +836,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_set_tag_post_request** | Option<[**Model20MlflowRegisteredModelsSetTagPostRequest**](Model20MlflowRegisteredModelsSetTagPostRequest.md)> |  |  |
+**model20_mlflow_registered_models_set_tag_post_request** | [**Model20MlflowRegisteredModelsSetTagPostRequest**](Model20MlflowRegisteredModelsSetTagPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -864,8 +864,8 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** |  | [required] |
-**description** | Option<**String**> |  |  |
+**name** | **String** | Registered model unique name identifier. This field is required. | [required] |
+**description** | Option<**String**> | If provided, updates the description for this ``registered_model``. |  |
 
 ### Return type
 
@@ -893,7 +893,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_create_post_request** | Option<[**Model20MlflowRunsCreatePostRequest**](Model20MlflowRunsCreatePostRequest.md)> |  |  |
+**model20_mlflow_runs_create_post_request** | Option<[**Model20MlflowRunsCreatePostRequest**](Model20MlflowRunsCreatePostRequest.md)> | Request body |  |
 
 ### Return type
 
@@ -921,7 +921,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_delete_post_request** | Option<[**Model20MlflowRunsDeletePostRequest**](Model20MlflowRunsDeletePostRequest.md)> |  |  |
+**model20_mlflow_runs_delete_post_request** | [**Model20MlflowRunsDeletePostRequest**](Model20MlflowRunsDeletePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -949,7 +949,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_delete_tag_post_request** | Option<[**Model20MlflowRunsDeleteTagPostRequest**](Model20MlflowRunsDeleteTagPostRequest.md)> |  |  |
+**model20_mlflow_runs_delete_tag_post_request** | [**Model20MlflowRunsDeleteTagPostRequest**](Model20MlflowRunsDeleteTagPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -977,8 +977,8 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**run_id** | Option<**String**> |  |  |
-**run_uuid** | Option<**String**> |  |  |
+**run_id** | Option<**String**> | ID of the run to fetch. Must be provided. |  |
+**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run to fetch. This field will be removed in a future MLflow version. |  |
 
 ### Return type
 
@@ -1006,7 +1006,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_batch_post_request** | Option<[**Model20MlflowRunsLogBatchPostRequest**](Model20MlflowRunsLogBatchPostRequest.md)> |  |  |
+**model20_mlflow_runs_log_batch_post_request** | Option<[**Model20MlflowRunsLogBatchPostRequest**](Model20MlflowRunsLogBatchPostRequest.md)> | Request body |  |
 
 ### Return type
 
@@ -1034,7 +1034,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_inputs_post_request** | Option<[**Model20MlflowRunsLogInputsPostRequest**](Model20MlflowRunsLogInputsPostRequest.md)> |  |  |
+**model20_mlflow_runs_log_inputs_post_request** | [**Model20MlflowRunsLogInputsPostRequest**](Model20MlflowRunsLogInputsPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -1062,7 +1062,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_metric_post_request** | Option<[**Model20MlflowRunsLogMetricPostRequest**](Model20MlflowRunsLogMetricPostRequest.md)> |  |  |
+**model20_mlflow_runs_log_metric_post_request** | [**Model20MlflowRunsLogMetricPostRequest**](Model20MlflowRunsLogMetricPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -1090,7 +1090,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_model_post_request** | Option<[**Model20MlflowRunsLogModelPostRequest**](Model20MlflowRunsLogModelPostRequest.md)> |  |  |
+**model20_mlflow_runs_log_model_post_request** | Option<[**Model20MlflowRunsLogModelPostRequest**](Model20MlflowRunsLogModelPostRequest.md)> | Request body |  |
 
 ### Return type
 
@@ -1110,7 +1110,7 @@ No authorization required
 
 ## call_20_mlflow_runs_log_parameter_post
 
-> call_20_mlflow_runs_log_parameter_post(model20_mlflow_runs_set_tag_post_request)
+> call_20_mlflow_runs_log_parameter_post(model20_mlflow_runs_log_parameter_post_request)
 
 
 ### Parameters
@@ -1118,7 +1118,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_set_tag_post_request** | Option<[**Model20MlflowRunsSetTagPostRequest**](Model20MlflowRunsSetTagPostRequest.md)> |  |  |
+**model20_mlflow_runs_log_parameter_post_request** | [**Model20MlflowRunsLogParameterPostRequest**](Model20MlflowRunsLogParameterPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -1138,7 +1138,7 @@ No authorization required
 
 ## call_20_mlflow_runs_restore_post
 
-> call_20_mlflow_runs_restore_post(model20_mlflow_runs_delete_post_request)
+> call_20_mlflow_runs_restore_post(model20_mlflow_runs_restore_post_request)
 
 
 ### Parameters
@@ -1146,7 +1146,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_delete_post_request** | Option<[**Model20MlflowRunsDeletePostRequest**](Model20MlflowRunsDeletePostRequest.md)> |  |  |
+**model20_mlflow_runs_restore_post_request** | [**Model20MlflowRunsRestorePostRequest**](Model20MlflowRunsRestorePostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -1174,7 +1174,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_search_post_request** | Option<[**Model20MlflowRunsSearchPostRequest**](Model20MlflowRunsSearchPostRequest.md)> |  |  |
+**model20_mlflow_runs_search_post_request** | Option<[**Model20MlflowRunsSearchPostRequest**](Model20MlflowRunsSearchPostRequest.md)> | Request body |  |
 
 ### Return type
 
@@ -1202,7 +1202,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_set_tag_post_request** | Option<[**Model20MlflowRunsSetTagPostRequest**](Model20MlflowRunsSetTagPostRequest.md)> |  |  |
+**model20_mlflow_runs_set_tag_post_request** | [**Model20MlflowRunsSetTagPostRequest**](Model20MlflowRunsSetTagPostRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -1230,7 +1230,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_update_post_request** | Option<[**Model20MlflowRunsUpdatePostRequest**](Model20MlflowRunsUpdatePostRequest.md)> |  |  |
+**model20_mlflow_runs_update_post_request** | Option<[**Model20MlflowRunsUpdatePostRequest**](Model20MlflowRunsUpdatePostRequest.md)> | Request body |  |
 
 ### Return type
 

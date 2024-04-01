@@ -12,16 +12,18 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRegisteredModelsRenamePostRequest {
-    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
+    /// Registered model unique name identifier. This field is required.
+    #[serde(rename = "name")]
+    pub name: String,
+    /// If provided, updates the name for this ``registered_model``.
     #[serde(rename = "new_name", skip_serializing_if = "Option::is_none")]
     pub new_name: Option<String>,
 }
 
 impl Model20MlflowRegisteredModelsRenamePostRequest {
-    pub fn new() -> Model20MlflowRegisteredModelsRenamePostRequest {
+    pub fn new(name: String) -> Model20MlflowRegisteredModelsRenamePostRequest {
         Model20MlflowRegisteredModelsRenamePostRequest {
-            name: None,
+            name,
             new_name: None,
         }
     }

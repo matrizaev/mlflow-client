@@ -12,8 +12,10 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowMetricsGetHistoryGet200Response {
+    /// All logged values for this metric.
     #[serde(rename = "metrics", skip_serializing_if = "Option::is_none")]
     pub metrics: Option<Vec<models::Mlflowmetric>>,
+    /// Token that can be used to issue a query for the next page of metric history values. A missing token indicates that no additional metrics are available to fetch.
     #[serde(rename = "next_page_token", skip_serializing_if = "Option::is_none")]
     pub next_page_token: Option<String>,
 }

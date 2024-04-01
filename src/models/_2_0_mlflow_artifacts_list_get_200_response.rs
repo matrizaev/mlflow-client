@@ -12,10 +12,13 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowArtifactsListGet200Response {
+    /// Root artifact directory for the run.
     #[serde(rename = "root_uri", skip_serializing_if = "Option::is_none")]
     pub root_uri: Option<String>,
+    /// File location and metadata for artifacts.
     #[serde(rename = "files", skip_serializing_if = "Option::is_none")]
     pub files: Option<Vec<models::Mlflowfileinfo>>,
+    /// Token that can be used to retrieve the next page of artifact results
     #[serde(rename = "next_page_token", skip_serializing_if = "Option::is_none")]
     pub next_page_token: Option<String>,
 }

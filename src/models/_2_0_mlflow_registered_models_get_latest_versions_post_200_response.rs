@@ -12,6 +12,7 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRegisteredModelsGetLatestVersionsPost200Response {
+    /// Latest version models for each requests stage. Only return models with current ``READY`` status. If no ``stages`` provided, returns the latest version for each stage, including ``\"None\"``.
     #[serde(rename = "model_versions", skip_serializing_if = "Option::is_none")]
     pub model_versions: Option<Vec<models::Mlflowmodelversion>>,
 }

@@ -12,6 +12,7 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowExperimentsCreatePost200Response {
+    /// Unique identifier for the experiment.
     #[serde(rename = "experiment_id", skip_serializing_if = "Option::is_none")]
     pub experiment_id: Option<String>,
 }

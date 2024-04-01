@@ -11,20 +11,16 @@
 use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct Model20MlflowExperimentsUpdatePostRequest {
+pub struct Model20MlflowExperimentsDeletePostRequest {
     /// ID of the associated experiment. This field is required.
     #[serde(rename = "experiment_id")]
     pub experiment_id: String,
-    /// If provided, the experiment's name is changed to the new name. The new name must be unique.
-    #[serde(rename = "new_name", skip_serializing_if = "Option::is_none")]
-    pub new_name: Option<String>,
 }
 
-impl Model20MlflowExperimentsUpdatePostRequest {
-    pub fn new(experiment_id: String) -> Model20MlflowExperimentsUpdatePostRequest {
-        Model20MlflowExperimentsUpdatePostRequest {
+impl Model20MlflowExperimentsDeletePostRequest {
+    pub fn new(experiment_id: String) -> Model20MlflowExperimentsDeletePostRequest {
+        Model20MlflowExperimentsDeletePostRequest {
             experiment_id,
-            new_name: None,
         }
     }
 }

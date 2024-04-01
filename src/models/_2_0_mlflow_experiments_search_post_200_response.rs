@@ -12,8 +12,10 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowExperimentsSearchPost200Response {
+    /// Experiments that match the search criteria
     #[serde(rename = "experiments", skip_serializing_if = "Option::is_none")]
     pub experiments: Option<Vec<models::Mlflowexperiment>>,
+    /// Token that can be used to retrieve the next page of experiments. An empty token means that no more experiments are available for retrieval.
     #[serde(rename = "next_page_token", skip_serializing_if = "Option::is_none")]
     pub next_page_token: Option<String>,
 }

@@ -12,8 +12,10 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRunsLogModelPostRequest {
+    /// ID of the run to log under
     #[serde(rename = "run_id", skip_serializing_if = "Option::is_none")]
     pub run_id: Option<String>,
+    /// MLmodel file in json format.
     #[serde(rename = "model_json", skip_serializing_if = "Option::is_none")]
     pub model_json: Option<String>,
 }

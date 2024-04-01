@@ -12,18 +12,21 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRegisteredModelsCreatePostRequest {
-    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
+    /// Register models under this name This field is required.
+    #[serde(rename = "name")]
+    pub name: String,
+    /// Additional metadata for registered model.
     #[serde(rename = "tags", skip_serializing_if = "Option::is_none")]
     pub tags: Option<Vec<models::Mlflowregisteredmodeltag>>,
+    /// Optional description for registered model.
     #[serde(rename = "description", skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
 }
 
 impl Model20MlflowRegisteredModelsCreatePostRequest {
-    pub fn new() -> Model20MlflowRegisteredModelsCreatePostRequest {
+    pub fn new(name: String) -> Model20MlflowRegisteredModelsCreatePostRequest {
         Model20MlflowRegisteredModelsCreatePostRequest {
-            name: None,
+            name,
             tags: None,
             description: None,
         }

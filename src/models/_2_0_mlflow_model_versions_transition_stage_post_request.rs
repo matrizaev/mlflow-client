@@ -12,23 +12,27 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowModelVersionsTransitionStagePostRequest {
-    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
-    #[serde(rename = "version", skip_serializing_if = "Option::is_none")]
-    pub version: Option<String>,
-    #[serde(rename = "stage", skip_serializing_if = "Option::is_none")]
-    pub stage: Option<String>,
-    #[serde(rename = "archive_existing_versions", skip_serializing_if = "Option::is_none")]
-    pub archive_existing_versions: Option<bool>,
+    /// Name of the registered model This field is required.
+    #[serde(rename = "name")]
+    pub name: String,
+    /// Model version number This field is required.
+    #[serde(rename = "version")]
+    pub version: String,
+    /// Transition `model_version` to new stage. This field is required.
+    #[serde(rename = "stage")]
+    pub stage: String,
+    /// When transitioning a model version to a particular stage, this flag dictates whether all existing model versions in that stage should be atomically moved to the \"archived\" stage. This ensures that at-most-one model version exists in the target stage. This field is *required* when transitioning a model versions's stage This field is required.
+    #[serde(rename = "archive_existing_versions")]
+    pub archive_existing_versions: bool,
 }
 
 impl Model20MlflowModelVersionsTransitionStagePostRequest {
-    pub fn new() -> Model20MlflowModelVersionsTransitionStagePostRequest {
+    pub fn new(name: String, version: String, stage: String, archive_existing_versions: bool) -> Model20MlflowModelVersionsTransitionStagePostRequest {
         Model20MlflowModelVersionsTransitionStagePostRequest {
-            name: None,
-            version: None,
-            stage: None,
-            archive_existing_versions: None,
+            name,
+            version,
+            stage,
+            archive_existing_versions,
         }
     }
 }

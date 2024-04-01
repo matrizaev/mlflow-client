@@ -12,20 +12,23 @@ use crate::models;
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Model20MlflowRegisteredModelsAliasPostRequest {
-    #[serde(rename = "name", skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
-    #[serde(rename = "alias", skip_serializing_if = "Option::is_none")]
-    pub alias: Option<String>,
-    #[serde(rename = "version", skip_serializing_if = "Option::is_none")]
-    pub version: Option<String>,
+    /// Name of the registered model. This field is required.
+    #[serde(rename = "name")]
+    pub name: String,
+    /// Name of the alias. Maximum size depends on storage backend. If an alias with this name already exists, its preexisting value will be replaced by the specified `version`. All storage backends are guaranteed to support alias name values up to 256 bytes in size. This field is required.
+    #[serde(rename = "alias")]
+    pub alias: String,
+    /// Model version number. This field is required.
+    #[serde(rename = "version")]
+    pub version: String,
 }
 
 impl Model20MlflowRegisteredModelsAliasPostRequest {
-    pub fn new() -> Model20MlflowRegisteredModelsAliasPostRequest {
+    pub fn new(name: String, alias: String, version: String) -> Model20MlflowRegisteredModelsAliasPostRequest {
         Model20MlflowRegisteredModelsAliasPostRequest {
-            name: None,
-            alias: None,
-            version: None,
+            name,
+            alias,
+            version,
         }
     }
 }

@@ -129,6 +129,7 @@ def populate_openapi_paths(service_definitions: dict) -> dict:
                     "content": {
                         "application/json": {
                             "schema": {
+                                "title": f"{service}Request",
                                 "type": "object",
                                 "properties": {
                                     prop["Field Name"]: {**prop["Type"], "description": prop["Description"]}
@@ -159,6 +160,7 @@ def populate_openapi_paths(service_definitions: dict) -> dict:
                 "content": {
                     "application/json": {
                         "schema": {
+                            "title": f"{service}200Response",
                             "type": "object",
                             "properties": {
                                 prop["Field Name"]: {**prop["Type"], "description": prop["Description"]}

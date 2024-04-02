@@ -63,7 +63,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicecreateexperiment200Response**](mlflowservicecreateexperiment_200_response.md)
+[**models::Mlflowservicecreateexperiment200Response**](mlflowservicecreateexperiment200Response.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicecreaterun200Response**](mlflowservicecreaterun_200_response.md)
+[**models::Mlflowservicecreaterun200Response**](mlflowservicecreaterun200Response.md)
 
 ### Authorization
 
@@ -203,7 +203,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicegetexperiment200Response**](mlflowservicegetexperiment_200_response.md)
+[**models::Mlflowservicegetexperiment200Response**](mlflowservicegetexperiment200Response.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ No authorization required
 
 ## mlflowservicegetexperimentbyname
 
-> models::Mlflowservicegetexperiment200Response mlflowservicegetexperimentbyname(experiment_name)
+> models::Mlflowservicegetexperimentbyname200Response mlflowservicegetexperimentbyname(experiment_name)
 
 
 ### Parameters
@@ -231,7 +231,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicegetexperiment200Response**](mlflowservicegetexperiment_200_response.md)
+[**models::Mlflowservicegetexperimentbyname200Response**](mlflowservicegetexperimentbyname200Response.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicegetmetrichistory200Response**](mlflowservicegetmetrichistory_200_response.md)
+[**models::Mlflowservicegetmetrichistory200Response**](mlflowservicegetmetrichistory200Response.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ No authorization required
 
 ## mlflowservicegetrun
 
-> models::Mlflowservicecreaterun200Response mlflowservicegetrun(run_id, run_uuid)
+> models::Mlflowservicegetrun200Response mlflowservicegetrun(run_id, run_uuid)
 
 
 ### Parameters
@@ -292,7 +292,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicecreaterun200Response**](mlflowservicecreaterun_200_response.md)
+[**models::Mlflowservicegetrun200Response**](mlflowservicegetrun200Response.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicelistartifacts200Response**](mlflowservicelistartifacts_200_response.md)
+[**models::Mlflowservicelistartifacts200Response**](mlflowservicelistartifacts200Response.md)
 
 ### Authorization
 
@@ -479,7 +479,7 @@ No authorization required
 
 ## mlflowservicerestoreexperiment
 
-> mlflowservicerestoreexperiment(mlflowservicedeleteexperiment_request)
+> mlflowservicerestoreexperiment(mlflowservicerestoreexperiment_request)
 
 
 ### Parameters
@@ -487,7 +487,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**mlflowservicedeleteexperiment_request** | [**MlflowservicedeleteexperimentRequest**](MlflowservicedeleteexperimentRequest.md) | Request body | [required] |
+**mlflowservicerestoreexperiment_request** | [**MlflowservicerestoreexperimentRequest**](MlflowservicerestoreexperimentRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicesearchexperiments200Response**](mlflowservicesearchexperiments_200_response.md)
+[**models::Mlflowservicesearchexperiments200Response**](mlflowservicesearchexperiments200Response.md)
 
 ### Authorization
 
@@ -575,7 +575,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowservicesearchruns200Response**](mlflowservicesearchruns_200_response.md)
+[**models::Mlflowservicesearchruns200Response**](mlflowservicesearchruns200Response.md)
 
 ### Authorization
 
@@ -687,7 +687,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Mlflowserviceupdaterun200Response**](mlflowserviceupdaterun_200_response.md)
+[**models::Mlflowserviceupdaterun200Response**](mlflowserviceupdaterun200Response.md)
 
 ### Authorization
 
@@ -715,7 +715,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion200Response.md)
 
 ### Authorization
 
@@ -743,7 +743,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
+[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel200Response.md)
 
 ### Authorization
 
@@ -887,7 +887,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicegetlatestversions200Response**](modelregistryservicegetlatestversions_200_response.md)
+[**models::Modelregistryservicegetlatestversions200Response**](modelregistryservicegetlatestversions200Response.md)
 
 ### Authorization
 
@@ -903,7 +903,7 @@ No authorization required
 
 ## modelregistryservicegetmodelversion
 
-> models::Modelregistryservicecreatemodelversion200Response modelregistryservicegetmodelversion(name, version)
+> models::Modelregistryservicegetmodelversion200Response modelregistryservicegetmodelversion(name, version)
 
 
 ### Parameters
@@ -916,7 +916,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+[**models::Modelregistryservicegetmodelversion200Response**](modelregistryservicegetmodelversion200Response.md)
 
 ### Authorization
 
@@ -945,7 +945,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicegetmodelversiondownloaduri200Response**](modelregistryservicegetmodelversiondownloaduri_200_response.md)
+[**models::Modelregistryservicegetmodelversiondownloaduri200Response**](modelregistryservicegetmodelversiondownloaduri200Response.md)
 
 ### Authorization
 
@@ -961,7 +961,7 @@ No authorization required
 
 ## modelregistryservicegetregisteredmodel
 
-> models::Modelregistryservicecreateregisteredmodel200Response modelregistryservicegetregisteredmodel(name)
+> models::Modelregistryservicegetregisteredmodel200Response modelregistryservicegetregisteredmodel(name)
 
 
 ### Parameters
@@ -973,7 +973,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
+[**models::Modelregistryservicegetregisteredmodel200Response**](modelregistryservicegetregisteredmodel200Response.md)
 
 ### Authorization
 
@@ -989,7 +989,7 @@ No authorization required
 
 ## modelregistryservicerenameregisteredmodel
 
-> models::Modelregistryservicecreateregisteredmodel200Response modelregistryservicerenameregisteredmodel(modelregistryservicerenameregisteredmodel_request)
+> models::Modelregistryservicerenameregisteredmodel200Response modelregistryservicerenameregisteredmodel(modelregistryservicerenameregisteredmodel_request)
 
 
 ### Parameters
@@ -1001,7 +1001,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
+[**models::Modelregistryservicerenameregisteredmodel200Response**](modelregistryservicerenameregisteredmodel200Response.md)
 
 ### Authorization
 
@@ -1032,7 +1032,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicesearchmodelversions200Response**](modelregistryservicesearchmodelversions_200_response.md)
+[**models::Modelregistryservicesearchmodelversions200Response**](modelregistryservicesearchmodelversions200Response.md)
 
 ### Authorization
 
@@ -1063,7 +1063,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicesearchregisteredmodels200Response**](modelregistryservicesearchregisteredmodels_200_response.md)
+[**models::Modelregistryservicesearchregisteredmodels200Response**](modelregistryservicesearchregisteredmodels200Response.md)
 
 ### Authorization
 
@@ -1163,7 +1163,7 @@ No authorization required
 
 ## modelregistryservicetransitionmodelversionstage
 
-> models::Modelregistryservicecreatemodelversion200Response modelregistryservicetransitionmodelversionstage(modelregistryservicetransitionmodelversionstage_request)
+> models::Modelregistryservicetransitionmodelversionstage200Response modelregistryservicetransitionmodelversionstage(modelregistryservicetransitionmodelversionstage_request)
 
 
 ### Parameters
@@ -1175,7 +1175,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+[**models::Modelregistryservicetransitionmodelversionstage200Response**](modelregistryservicetransitionmodelversionstage200Response.md)
 
 ### Authorization
 
@@ -1191,7 +1191,7 @@ No authorization required
 
 ## modelregistryserviceupdatemodelversion
 
-> models::Modelregistryservicecreatemodelversion200Response modelregistryserviceupdatemodelversion(name, version, description)
+> models::Modelregistryserviceupdatemodelversion200Response modelregistryserviceupdatemodelversion(name, version, description)
 
 
 ### Parameters
@@ -1205,7 +1205,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+[**models::Modelregistryserviceupdatemodelversion200Response**](modelregistryserviceupdatemodelversion200Response.md)
 
 ### Authorization
 
@@ -1221,7 +1221,7 @@ No authorization required
 
 ## modelregistryserviceupdateregisteredmodel
 
-> models::Modelregistryservicecreateregisteredmodel200Response modelregistryserviceupdateregisteredmodel(name, description)
+> models::Modelregistryserviceupdateregisteredmodel200Response modelregistryserviceupdateregisteredmodel(name, description)
 
 
 ### Parameters
@@ -1234,7 +1234,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
+[**models::Modelregistryserviceupdateregisteredmodel200Response**](modelregistryserviceupdateregisteredmodel200Response.md)
 
 ### Authorization
 

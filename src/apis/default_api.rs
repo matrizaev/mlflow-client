@@ -478,7 +478,7 @@ pub async fn mlflowservicegetexperiment(configuration: &configuration::Configura
     }
 }
 
-pub async fn mlflowservicegetexperimentbyname(configuration: &configuration::Configuration, experiment_name: &str) -> Result<models::Mlflowservicegetexperiment200Response, Error<MlflowservicegetexperimentbynameError>> {
+pub async fn mlflowservicegetexperimentbyname(configuration: &configuration::Configuration, experiment_name: &str) -> Result<models::Mlflowservicegetexperimentbyname200Response, Error<MlflowservicegetexperimentbynameError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -546,7 +546,7 @@ pub async fn mlflowservicegetmetrichistory(configuration: &configuration::Config
     }
 }
 
-pub async fn mlflowservicegetrun(configuration: &configuration::Configuration, run_id: Option<&str>, run_uuid: Option<&str>) -> Result<models::Mlflowservicecreaterun200Response, Error<MlflowservicegetrunError>> {
+pub async fn mlflowservicegetrun(configuration: &configuration::Configuration, run_id: Option<&str>, run_uuid: Option<&str>) -> Result<models::Mlflowservicegetrun200Response, Error<MlflowservicegetrunError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -758,7 +758,7 @@ pub async fn mlflowservicelogparam(configuration: &configuration::Configuration,
     }
 }
 
-pub async fn mlflowservicerestoreexperiment(configuration: &configuration::Configuration, mlflowservicedeleteexperiment_request: models::MlflowservicedeleteexperimentRequest) -> Result<(), Error<MlflowservicerestoreexperimentError>> {
+pub async fn mlflowservicerestoreexperiment(configuration: &configuration::Configuration, mlflowservicerestoreexperiment_request: models::MlflowservicerestoreexperimentRequest) -> Result<(), Error<MlflowservicerestoreexperimentError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -769,7 +769,7 @@ pub async fn mlflowservicerestoreexperiment(configuration: &configuration::Confi
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&mlflowservicedeleteexperiment_request);
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicerestoreexperiment_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -1182,7 +1182,7 @@ pub async fn modelregistryservicegetlatestversions(configuration: &configuration
     }
 }
 
-pub async fn modelregistryservicegetmodelversion(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryservicegetmodelversionError>> {
+pub async fn modelregistryservicegetmodelversion(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<models::Modelregistryservicegetmodelversion200Response, Error<ModelregistryservicegetmodelversionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1240,7 +1240,7 @@ pub async fn modelregistryservicegetmodelversiondownloaduri(configuration: &conf
     }
 }
 
-pub async fn modelregistryservicegetregisteredmodel(configuration: &configuration::Configuration, name: &str) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryservicegetregisteredmodelError>> {
+pub async fn modelregistryservicegetregisteredmodel(configuration: &configuration::Configuration, name: &str) -> Result<models::Modelregistryservicegetregisteredmodel200Response, Error<ModelregistryservicegetregisteredmodelError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1268,7 +1268,7 @@ pub async fn modelregistryservicegetregisteredmodel(configuration: &configuratio
     }
 }
 
-pub async fn modelregistryservicerenameregisteredmodel(configuration: &configuration::Configuration, modelregistryservicerenameregisteredmodel_request: models::ModelregistryservicerenameregisteredmodelRequest) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryservicerenameregisteredmodelError>> {
+pub async fn modelregistryservicerenameregisteredmodel(configuration: &configuration::Configuration, modelregistryservicerenameregisteredmodel_request: models::ModelregistryservicerenameregisteredmodelRequest) -> Result<models::Modelregistryservicerenameregisteredmodel200Response, Error<ModelregistryservicerenameregisteredmodelError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1464,7 +1464,7 @@ pub async fn modelregistryservicesetregisteredmodeltag(configuration: &configura
     }
 }
 
-pub async fn modelregistryservicetransitionmodelversionstage(configuration: &configuration::Configuration, modelregistryservicetransitionmodelversionstage_request: models::ModelregistryservicetransitionmodelversionstageRequest) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryservicetransitionmodelversionstageError>> {
+pub async fn modelregistryservicetransitionmodelversionstage(configuration: &configuration::Configuration, modelregistryservicetransitionmodelversionstage_request: models::ModelregistryservicetransitionmodelversionstageRequest) -> Result<models::Modelregistryservicetransitionmodelversionstage200Response, Error<ModelregistryservicetransitionmodelversionstageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1492,7 +1492,7 @@ pub async fn modelregistryservicetransitionmodelversionstage(configuration: &con
     }
 }
 
-pub async fn modelregistryserviceupdatemodelversion(configuration: &configuration::Configuration, name: &str, version: &str, description: Option<&str>) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryserviceupdatemodelversionError>> {
+pub async fn modelregistryserviceupdatemodelversion(configuration: &configuration::Configuration, name: &str, version: &str, description: Option<&str>) -> Result<models::Modelregistryserviceupdatemodelversion200Response, Error<ModelregistryserviceupdatemodelversionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1524,7 +1524,7 @@ pub async fn modelregistryserviceupdatemodelversion(configuration: &configuratio
     }
 }
 
-pub async fn modelregistryserviceupdateregisteredmodel(configuration: &configuration::Configuration, name: &str, description: Option<&str>) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryserviceupdateregisteredmodelError>> {
+pub async fn modelregistryserviceupdateregisteredmodel(configuration: &configuration::Configuration, name: &str, description: Option<&str>) -> Result<models::Modelregistryserviceupdateregisteredmodel200Response, Error<ModelregistryserviceupdateregisteredmodelError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

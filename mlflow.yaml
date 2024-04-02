@@ -14,6 +14,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicecreateexperimentRequest
               type: object
               properties:
                 name:
@@ -42,6 +43,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicecreateexperiment200Response
                 type: object
                 properties:
                   experiment_id:
@@ -56,6 +58,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicesearchexperimentsRequest
               type: object
               properties:
                 max_results:
@@ -99,6 +102,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicesearchexperiments200Response
                 type: object
                 properties:
                   experiments:
@@ -127,6 +131,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicegetexperiment200Response
                 type: object
                 properties:
                   experiment:
@@ -148,6 +153,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicegetexperimentbyname200Response
                 type: object
                 properties:
                   experiment:
@@ -162,6 +168,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicedeleteexperimentRequest
               type: object
               properties:
                 experiment_id:
@@ -181,6 +188,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicerestoreexperimentRequest
               type: object
               properties:
                 experiment_id:
@@ -200,6 +208,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowserviceupdateexperimentRequest
               type: object
               properties:
                 experiment_id:
@@ -223,6 +232,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicecreaterunRequest
               type: object
               properties:
                 experiment_id:
@@ -251,6 +261,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicecreaterun200Response
                 type: object
                 properties:
                   run:
@@ -265,6 +276,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicedeleterunRequest
               type: object
               properties:
                 run_id:
@@ -284,6 +296,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicerestorerunRequest
               type: object
               properties:
                 run_id:
@@ -317,6 +330,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicegetrun200Response
                 type: object
                 properties:
                   run:
@@ -332,6 +346,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicelogmetricRequest
               type: object
               properties:
                 run_id:
@@ -375,6 +390,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicelogbatchRequest
               type: object
               properties:
                 run_id:
@@ -410,6 +426,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicelogmodelRequest
               type: object
               properties:
                 run_id:
@@ -430,6 +447,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowserviceloginputsRequest
               type: object
               properties:
                 run_id:
@@ -454,6 +472,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicesetexperimenttagRequest
               type: object
               properties:
                 experiment_id:
@@ -487,6 +506,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicesettagRequest
               type: object
               properties:
                 run_id:
@@ -523,6 +543,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicedeletetagRequest
               type: object
               properties:
                 run_id:
@@ -548,6 +569,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicelogparamRequest
               type: object
               properties:
                 run_id:
@@ -619,6 +641,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicegetmetrichistory200Response
                 type: object
                 properties:
                   metrics:
@@ -640,6 +663,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowservicesearchrunsRequest
               type: object
               properties:
                 experiment_ids:
@@ -689,6 +713,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicesearchruns200Response
                 type: object
                 properties:
                   runs:
@@ -735,6 +760,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowservicelistartifacts200Response
                 type: object
                 properties:
                   root_uri:
@@ -758,6 +784,7 @@ paths:
         content:
           application/json:
             schema:
+              title: mlflowserviceupdaterunRequest
               type: object
               properties:
                 run_id:
@@ -783,6 +810,7 @@ paths:
           content:
             application/json:
               schema:
+                title: mlflowserviceupdaterun200Response
                 type: object
                 properties:
                   run_info:
@@ -797,6 +825,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicecreateregisteredmodelRequest
               type: object
               properties:
                 name:
@@ -818,6 +847,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicecreateregisteredmodel200Response
                 type: object
                 properties:
                   registered_model:
@@ -839,6 +869,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicegetregisteredmodel200Response
                 type: object
                 properties:
                   registered_model:
@@ -853,6 +884,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicerenameregisteredmodelRequest
               type: object
               properties:
                 name:
@@ -870,6 +902,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicerenameregisteredmodel200Response
                 type: object
                 properties:
                   registered_model:
@@ -897,6 +930,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryserviceupdateregisteredmodel200Response
                 type: object
                 properties:
                   registered_model:
@@ -924,6 +958,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicegetlatestversionsRequest
               type: object
               properties:
                 name:
@@ -943,6 +978,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicegetlatestversions200Response
                 type: object
                 properties:
                   model_versions:
@@ -962,6 +998,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicecreatemodelversionRequest
               type: object
               properties:
                 name:
@@ -997,6 +1034,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicecreatemodelversion200Response
                 type: object
                 properties:
                   model_version:
@@ -1025,6 +1063,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicegetmodelversion200Response
                 type: object
                 properties:
                   model_version:
@@ -1058,6 +1097,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryserviceupdatemodelversion200Response
                 type: object
                 properties:
                   model_version:
@@ -1126,6 +1166,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicesearchmodelversions200Response
                 type: object
                 properties:
                   model_versions:
@@ -1159,6 +1200,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicegetmodelversiondownloaduri200Response
                 type: object
                 properties:
                   artifact_uri:
@@ -1174,6 +1216,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicetransitionmodelversionstageRequest
               type: object
               properties:
                 name:
@@ -1205,6 +1248,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicetransitionmodelversionstage200Response
                 type: object
                 properties:
                   model_version:
@@ -1253,6 +1297,7 @@ paths:
           content:
             application/json:
               schema:
+                title: modelregistryservicesearchregisteredmodels200Response
                 type: object
                 properties:
                   registered_models:
@@ -1272,6 +1317,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicesetregisteredmodeltagRequest
               type: object
               properties:
                 name:
@@ -1304,6 +1350,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicesetmodelversiontagRequest
               type: object
               properties:
                 name:
@@ -1389,6 +1436,7 @@ paths:
         content:
           application/json:
             schema:
+              title: modelregistryservicesetregisteredmodelaliasRequest
               type: object
               properties:
                 name:

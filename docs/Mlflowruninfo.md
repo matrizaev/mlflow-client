@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **run_name** | Option<**String**> |  | [optional]
 **experiment_id** | Option<**String**> |  | [optional]
 **user_id** | Option<**String**> |  | [optional]
-**status** | Option<[**models::Mlflowrunstatus**](mlflowrunstatus.md)> |  | [optional]
+**status** | Option<[**models::Mlflowrunstatus**](Mlflowrunstatus.md)> |  | [optional]
 **start_time** | Option<**i64**> |  | [optional]
 **end_time** | Option<**i64**> |  | [optional]
 **artifact_uri** | Option<**String**> |  | [optional]

@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **description** | Option<**String**> |  | [optional]
 **source** | Option<**String**> |  | [optional]
 **run_id** | Option<**String**> |  | [optional]
-**status** | Option<[**models::Mlflowmodelversionstatus**](mlflowmodelversionstatus.md)> |  | [optional]
+**status** | Option<[**models::Mlflowmodelversionstatus**](Mlflowmodelversionstatus.md)> |  | [optional]
 **status_message** | Option<**String**> |  | [optional]
-**tags** | Option<[**Vec<models::Mlflowmodelversiontag>**](mlflowmodelversiontag.md)> |  | [optional]
+**tags** | Option<[**Vec<models::Mlflowmodelversiontag>**](Mlflowmodelversiontag.md)> |  | [optional]
 **run_link** | Option<**String**> |  | [optional]
 **aliases** | Option<**Vec<String>**> |  | [optional]
 

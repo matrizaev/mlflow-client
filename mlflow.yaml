@@ -28,7 +28,7 @@ paths:
                 tags:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowexperimenttag'
+                    $ref: '#/components/schemas/Mlflowexperimenttag'
                   description: A collection of tags to set on the experiment. Maximum
                     tag size and number of tags per request depends on the storage
                     backend. All storage backends are guaranteed to support tag keys
@@ -93,7 +93,7 @@ paths:
                     "ASC" annotation, where "ASC" is the default. Tiebreaks are done
                     by experiment id DESC.
                 view_type:
-                  $ref: '#/components/schemas/mlflowviewtype'
+                  $ref: '#/components/schemas/Mlflowviewtype'
                   description: Qualifier for type of experiments to be returned. If
                     unspecified, return only active experiments.
       responses:
@@ -108,7 +108,7 @@ paths:
                   experiments:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowexperiment'
+                      $ref: '#/components/schemas/Mlflowexperiment'
                     description: Experiments that match the search criteria
                   next_page_token:
                     type: string
@@ -135,7 +135,7 @@ paths:
                 type: object
                 properties:
                   experiment:
-                    $ref: '#/components/schemas/mlflowexperiment'
+                    $ref: '#/components/schemas/Mlflowexperiment'
                     description: Experiment details.
   /2.0/mlflow/experiments/get-by-name:
     get:
@@ -157,7 +157,7 @@ paths:
                 type: object
                 properties:
                   experiment:
-                    $ref: '#/components/schemas/mlflowexperiment'
+                    $ref: '#/components/schemas/Mlflowexperiment'
                     description: Experiment details.
   /2.0/mlflow/experiments/delete:
     post:
@@ -253,7 +253,7 @@ paths:
                 tags:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowruntag'
+                    $ref: '#/components/schemas/Mlflowruntag'
                   description: Additional metadata for run.
       responses:
         '200':
@@ -265,7 +265,7 @@ paths:
                 type: object
                 properties:
                   run:
-                    $ref: '#/components/schemas/mlflowrun'
+                    $ref: '#/components/schemas/Mlflowrun'
                     description: The newly created run.
   /2.0/mlflow/runs/delete:
     post:
@@ -334,7 +334,7 @@ paths:
                 type: object
                 properties:
                   run:
-                    $ref: '#/components/schemas/mlflowrun'
+                    $ref: '#/components/schemas/Mlflowrun'
                     description: Run metadata (name, start time, etc) and data (metrics,
                       params, and tags).
   /2.0/mlflow/runs/log-metric:
@@ -399,19 +399,19 @@ paths:
                 metrics:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowmetric'
+                    $ref: '#/components/schemas/Mlflowmetric'
                   description: Metrics to log. A single request can contain up to
                     1000 metrics, and up to 1000 metrics, params, and tags in total.
                 params:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowparam'
+                    $ref: '#/components/schemas/Mlflowparam'
                   description: Params to log. A single request can contain up to 100
                     params, and up to 1000 metrics, params, and tags in total.
                 tags:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowruntag'
+                    $ref: '#/components/schemas/Mlflowruntag'
                   description: Tags to log. A single request can contain up to 100
                     tags, and up to 1000 metrics, params, and tags in total.
       responses:
@@ -456,7 +456,7 @@ paths:
                 datasets:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowdatasetinput'
+                    $ref: '#/components/schemas/Mlflowdatasetinput'
                   description: Dataset inputs
               required:
               - run_id
@@ -647,7 +647,7 @@ paths:
                   metrics:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowmetric'
+                      $ref: '#/components/schemas/Mlflowmetric'
                     description: All logged values for this metric.
                   next_page_token:
                     type: string
@@ -683,7 +683,7 @@ paths:
                     and tags."user-name" = ''Tomas''``  Supported operators are ``=``,
                     ``!=``, ``>``, ``>=``, ``<``, and ``<=``.'
                 run_view_type:
-                  $ref: '#/components/schemas/mlflowviewtype'
+                  $ref: '#/components/schemas/Mlflowviewtype'
                   description: Whether to display only active, only deleted, or all
                     runs. Defaults to only active runs.
                 max_results:
@@ -719,7 +719,7 @@ paths:
                   runs:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowrun'
+                      $ref: '#/components/schemas/Mlflowrun'
                     description: Runs that match the search criteria.
                   next_page_token:
                     type: string
@@ -769,7 +769,7 @@ paths:
                   files:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowfileinfo'
+                      $ref: '#/components/schemas/Mlflowfileinfo'
                     description: File location and metadata for artifacts.
                   next_page_token:
                     type: string
@@ -795,7 +795,7 @@ paths:
                   description: '[Deprecated, use run_id instead] ID of the run to
                     update.. This field will be removed in a future MLflow version.'
                 status:
-                  $ref: '#/components/schemas/mlflowrunstatus'
+                  $ref: '#/components/schemas/Mlflowrunstatus'
                   description: Updated status of the run.
                 end_time:
                   type: integer
@@ -814,7 +814,7 @@ paths:
                 type: object
                 properties:
                   run_info:
-                    $ref: '#/components/schemas/mlflowruninfo'
+                    $ref: '#/components/schemas/Mlflowruninfo'
                     description: Updated metadata of the run.
   /2.0/mlflow/registered-models/create:
     post:
@@ -834,7 +834,7 @@ paths:
                 tags:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowregisteredmodeltag'
+                    $ref: '#/components/schemas/Mlflowregisteredmodeltag'
                   description: Additional metadata for registered model.
                 description:
                   type: string
@@ -851,7 +851,7 @@ paths:
                 type: object
                 properties:
                   registered_model:
-                    $ref: '#/components/schemas/mlflowregisteredmodel'
+                    $ref: '#/components/schemas/Mlflowregisteredmodel'
                     description: ''
   /2.0/mlflow/registered-models/get:
     get:
@@ -873,7 +873,7 @@ paths:
                 type: object
                 properties:
                   registered_model:
-                    $ref: '#/components/schemas/mlflowregisteredmodel'
+                    $ref: '#/components/schemas/Mlflowregisteredmodel'
                     description: ''
   /2.0/mlflow/registered-models/rename:
     post:
@@ -906,7 +906,7 @@ paths:
                 type: object
                 properties:
                   registered_model:
-                    $ref: '#/components/schemas/mlflowregisteredmodel'
+                    $ref: '#/components/schemas/Mlflowregisteredmodel'
                     description: ''
   /2.0/mlflow/registered-models/update:
     patch:
@@ -934,7 +934,7 @@ paths:
                 type: object
                 properties:
                   registered_model:
-                    $ref: '#/components/schemas/mlflowregisteredmodel'
+                    $ref: '#/components/schemas/Mlflowregisteredmodel'
                     description: ''
   /2.0/mlflow/registered-models/delete:
     delete:
@@ -984,7 +984,7 @@ paths:
                   model_versions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowmodelversion'
+                      $ref: '#/components/schemas/Mlflowmodelversion'
                     description: Latest version models for each requests stage. Only
                       return models with current ``READY`` status. If no ``stages``
                       provided, returns the latest version for each stage, including
@@ -1015,7 +1015,7 @@ paths:
                 tags:
                   type: array
                   items:
-                    $ref: '#/components/schemas/mlflowmodelversiontag'
+                    $ref: '#/components/schemas/Mlflowmodelversiontag'
                   description: Additional metadata for model version.
                 run_link:
                   type: string
@@ -1038,7 +1038,7 @@ paths:
                 type: object
                 properties:
                   model_version:
-                    $ref: '#/components/schemas/mlflowmodelversion'
+                    $ref: '#/components/schemas/Mlflowmodelversion'
                     description: Return new version number generated for this model
                       in registry.
   /2.0/mlflow/model-versions/get:
@@ -1067,7 +1067,7 @@ paths:
                 type: object
                 properties:
                   model_version:
-                    $ref: '#/components/schemas/mlflowmodelversion'
+                    $ref: '#/components/schemas/Mlflowmodelversion'
                     description: ''
   /2.0/mlflow/model-versions/update:
     patch:
@@ -1101,7 +1101,7 @@ paths:
                 type: object
                 properties:
                   model_version:
-                    $ref: '#/components/schemas/mlflowmodelversion'
+                    $ref: '#/components/schemas/Mlflowmodelversion'
                     description: Return new version number generated for this model
                       in registry.
   /2.0/mlflow/model-versions/delete:
@@ -1172,7 +1172,7 @@ paths:
                   model_versions:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowmodelversion'
+                      $ref: '#/components/schemas/Mlflowmodelversion'
                     description: Models that match the search criteria
                   next_page_token:
                     type: string
@@ -1252,7 +1252,7 @@ paths:
                 type: object
                 properties:
                   model_version:
-                    $ref: '#/components/schemas/mlflowmodelversion'
+                    $ref: '#/components/schemas/Mlflowmodelversion'
                     description: Updated model version
   /2.0/mlflow/registered-models/search:
     get:
@@ -1303,7 +1303,7 @@ paths:
                   registered_models:
                     type: array
                     items:
-                      $ref: '#/components/schemas/mlflowregisteredmodel'
+                      $ref: '#/components/schemas/Mlflowregisteredmodel'
                     description: Registered Models that match the search criteria.
                   next_page_token:
                     type: string
@@ -1461,7 +1461,7 @@ paths:
           description: OK
 components:
   schemas:
-    mlflowdataset:
+    Mlflowdataset:
       type: object
       properties:
         name:
@@ -1476,16 +1476,16 @@ components:
           type: string
         profile:
           type: string
-    mlflowdatasetinput:
+    Mlflowdatasetinput:
       type: object
       properties:
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowinputtag'
+            $ref: '#/components/schemas/Mlflowinputtag'
         dataset:
-          $ref: '#/components/schemas/mlflowdataset'
-    mlflowexperiment:
+          $ref: '#/components/schemas/Mlflowdataset'
+    Mlflowexperiment:
       type: object
       properties:
         experiment_id:
@@ -1505,15 +1505,15 @@ components:
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowexperimenttag'
-    mlflowexperimenttag:
+            $ref: '#/components/schemas/Mlflowexperimenttag'
+    Mlflowexperimenttag:
       type: object
       properties:
         key:
           type: string
         value:
           type: string
-    mlflowfileinfo:
+    Mlflowfileinfo:
       type: object
       properties:
         path:
@@ -1523,14 +1523,14 @@ components:
         file_size:
           type: integer
           format: int64
-    mlflowinputtag:
+    Mlflowinputtag:
       type: object
       properties:
         key:
           type: string
         value:
           type: string
-    mlflowmetric:
+    Mlflowmetric:
       type: object
       properties:
         key:
@@ -1543,7 +1543,7 @@ components:
         step:
           type: integer
           format: int64
-    mlflowmodelversion:
+    Mlflowmodelversion:
       type: object
       properties:
         name:
@@ -1567,34 +1567,34 @@ components:
         run_id:
           type: string
         status:
-          $ref: '#/components/schemas/mlflowmodelversionstatus'
+          $ref: '#/components/schemas/Mlflowmodelversionstatus'
         status_message:
           type: string
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowmodelversiontag'
+            $ref: '#/components/schemas/Mlflowmodelversiontag'
         run_link:
           type: string
         aliases:
           type: array
           items:
             type: string
-    mlflowmodelversiontag:
+    Mlflowmodelversiontag:
       type: object
       properties:
         key:
           type: string
         value:
           type: string
-    mlflowparam:
+    Mlflowparam:
       type: object
       properties:
         key:
           type: string
         value:
           type: string
-    mlflowregisteredmodel:
+    Mlflowregisteredmodel:
       type: object
       properties:
         name:
@@ -1612,54 +1612,54 @@ components:
         latest_versions:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowmodelversion'
+            $ref: '#/components/schemas/Mlflowmodelversion'
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowregisteredmodeltag'
+            $ref: '#/components/schemas/Mlflowregisteredmodeltag'
         aliases:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowregisteredmodelalias'
-    mlflowregisteredmodelalias:
+            $ref: '#/components/schemas/Mlflowregisteredmodelalias'
+    Mlflowregisteredmodelalias:
       type: object
       properties:
         alias:
           type: string
         version:
           type: string
-    mlflowregisteredmodeltag:
+    Mlflowregisteredmodeltag:
       type: object
       properties:
         key:
           type: string
         value:
           type: string
-    mlflowrun:
+    Mlflowrun:
       type: object
       properties:
         info:
-          $ref: '#/components/schemas/mlflowruninfo'
+          $ref: '#/components/schemas/Mlflowruninfo'
         data:
-          $ref: '#/components/schemas/mlflowrundata'
+          $ref: '#/components/schemas/Mlflowrundata'
         inputs:
-          $ref: '#/components/schemas/mlflowruninputs'
-    mlflowrundata:
+          $ref: '#/components/schemas/Mlflowruninputs'
+    Mlflowrundata:
       type: object
       properties:
         metrics:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowmetric'
+            $ref: '#/components/schemas/Mlflowmetric'
         params:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowparam'
+            $ref: '#/components/schemas/Mlflowparam'
         tags:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowruntag'
-    mlflowruninfo:
+            $ref: '#/components/schemas/Mlflowruntag'
+    Mlflowruninfo:
       type: object
       properties:
         run_id:
@@ -1673,7 +1673,7 @@ components:
         user_id:
           type: string
         status:
-          $ref: '#/components/schemas/mlflowrunstatus'
+          $ref: '#/components/schemas/Mlflowrunstatus'
         start_time:
           type: integer
           format: int64
@@ -1684,27 +1684,27 @@ components:
           type: string
         lifecycle_stage:
           type: string
-    mlflowruninputs:
+    Mlflowruninputs:
       type: object
       properties:
         dataset_inputs:
           type: array
           items:
-            $ref: '#/components/schemas/mlflowdatasetinput'
-    mlflowruntag:
+            $ref: '#/components/schemas/Mlflowdatasetinput'
+    Mlflowruntag:
       type: object
       properties:
         key:
           type: string
         value:
           type: string
-    mlflowmodelversionstatus:
+    Mlflowmodelversionstatus:
       type: string
       enum:
       - PENDING_REGISTRATION
       - FAILED_REGISTRATION
       - READY
-    mlflowrunstatus:
+    Mlflowrunstatus:
       type: string
       enum:
       - RUNNING
@@ -1712,7 +1712,7 @@ components:
       - FINISHED
       - FAILED
       - KILLED
-    mlflowviewtype:
+    Mlflowviewtype:
       type: string
       enum:
       - ACTIVE_ONLY

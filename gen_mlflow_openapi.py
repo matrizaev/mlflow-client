@@ -30,7 +30,7 @@ def convert_prop_type(prop_type: str) -> dict[str, str] | dict[str, dict[str, st
             # Handle array with reference
             return {
                 "type": "array",
-                "items": {"$ref": "#/components/schemas/" + prop_type.split(":ref:")[-1].strip("`")},
+                "items": {"$ref": "#/components/schemas/" + prop_type.split(":ref:")[-1].strip("`").capitalize()},
             }
         else:
             # Handle array with simple type
@@ -38,7 +38,7 @@ def convert_prop_type(prop_type: str) -> dict[str, str] | dict[str, dict[str, st
             return {"type": "array", "items": simple_types.get(base_type, None)}
     elif ":ref:" in prop_type:
         # Handle reference type
-        return {"$ref": "#/components/schemas/" + prop_type.split(":ref:")[-1].strip("`")}
+        return {"$ref": "#/components/schemas/" + prop_type.split(":ref:")[-1].strip("`").capitalize()}
     else:
         # Handle simple type
         return simple_types.get(prop_type, None)
@@ -261,7 +261,7 @@ def parse_schemas(structure_defs: Iterator[str]) -> dict[str, dict[pd.DataFrame]
         structure = None
         for line in lines:
             if line.startswith("mlflow"):
-                structure = line.split()[-1].replace(":", "").lower()
+                structure = line.split()[-1].replace(":", "").lower().capitalize()
                 structures[structure] = {
                     "schema": markdown_table_to_dataframe(lines, "-"),
                 }

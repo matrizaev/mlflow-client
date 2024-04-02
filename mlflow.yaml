@@ -7,6 +7,7 @@ servers:
 paths:
   /2.0/mlflow/experiments/create:
     post:
+      operationId: mlflowservicecreateexperiment
       requestBody:
         required: true
         description: Request body
@@ -48,6 +49,7 @@ paths:
                     description: Unique identifier for the experiment.
   /2.0/mlflow/experiments/search:
     post:
+      operationId: mlflowservicesearchexperiments
       requestBody:
         required: false
         description: Request body
@@ -111,6 +113,7 @@ paths:
                       are available for retrieval.
   /2.0/mlflow/experiments/get:
     get:
+      operationId: mlflowservicegetexperiment
       parameters:
       - in: query
         name: experiment_id
@@ -131,6 +134,7 @@ paths:
                     description: Experiment details.
   /2.0/mlflow/experiments/get-by-name:
     get:
+      operationId: mlflowservicegetexperimentbyname
       parameters:
       - in: query
         name: experiment_name
@@ -151,6 +155,7 @@ paths:
                     description: Experiment details.
   /2.0/mlflow/experiments/delete:
     post:
+      operationId: mlflowservicedeleteexperiment
       requestBody:
         required: true
         description: Request body
@@ -169,6 +174,7 @@ paths:
           description: OK
   /2.0/mlflow/experiments/restore:
     post:
+      operationId: mlflowservicerestoreexperiment
       requestBody:
         required: true
         description: Request body
@@ -187,6 +193,7 @@ paths:
           description: OK
   /2.0/mlflow/experiments/update:
     post:
+      operationId: mlflowserviceupdateexperiment
       requestBody:
         required: true
         description: Request body
@@ -209,6 +216,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/create:
     post:
+      operationId: mlflowservicecreaterun
       requestBody:
         required: false
         description: Request body
@@ -250,6 +258,7 @@ paths:
                     description: The newly created run.
   /2.0/mlflow/runs/delete:
     post:
+      operationId: mlflowservicedeleterun
       requestBody:
         required: true
         description: Request body
@@ -268,6 +277,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/restore:
     post:
+      operationId: mlflowservicerestorerun
       requestBody:
         required: true
         description: Request body
@@ -286,6 +296,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/get:
     get:
+      operationId: mlflowservicegetrun
       parameters:
       - in: query
         name: run_id
@@ -314,6 +325,7 @@ paths:
                       params, and tags).
   /2.0/mlflow/runs/log-metric:
     post:
+      operationId: mlflowservicelogmetric
       requestBody:
         required: true
         description: Request body
@@ -356,6 +368,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/log-batch:
     post:
+      operationId: mlflowservicelogbatch
       requestBody:
         required: false
         description: Request body
@@ -390,6 +403,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/log-model:
     post:
+      operationId: mlflowservicelogmodel
       requestBody:
         required: false
         description: Request body
@@ -409,6 +423,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/log-inputs:
     post:
+      operationId: mlflowserviceloginputs
       requestBody:
         required: true
         description: Request body
@@ -432,6 +447,7 @@ paths:
           description: OK
   /2.0/mlflow/experiments/set-experiment-tag:
     post:
+      operationId: mlflowservicesetexperimenttag
       requestBody:
         required: true
         description: Request body
@@ -464,6 +480,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/set-tag:
     post:
+      operationId: mlflowservicesettag
       requestBody:
         required: true
         description: Request body
@@ -499,6 +516,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/delete-tag:
     post:
+      operationId: mlflowservicedeletetag
       requestBody:
         required: true
         description: Request body
@@ -523,6 +541,7 @@ paths:
           description: OK
   /2.0/mlflow/runs/log-parameter:
     post:
+      operationId: mlflowservicelogparam
       requestBody:
         required: true
         description: Request body
@@ -556,6 +575,7 @@ paths:
           description: OK
   /2.0/mlflow/metrics/get-history:
     get:
+      operationId: mlflowservicegetmetrichistory
       parameters:
       - in: query
         name: run_id
@@ -613,6 +633,7 @@ paths:
                       no additional metrics are available to fetch.
   /2.0/mlflow/runs/search:
     post:
+      operationId: mlflowservicesearchruns
       requestBody:
         required: false
         description: Request body
@@ -680,6 +701,7 @@ paths:
                     description: ''
   /2.0/mlflow/artifacts/list:
     get:
+      operationId: mlflowservicelistartifacts
       parameters:
       - in: query
         name: run_id
@@ -729,6 +751,7 @@ paths:
                       of artifact results
   /2.0/mlflow/runs/update:
     post:
+      operationId: mlflowserviceupdaterun
       requestBody:
         required: false
         description: Request body
@@ -767,6 +790,7 @@ paths:
                     description: Updated metadata of the run.
   /2.0/mlflow/registered-models/create:
     post:
+      operationId: modelregistryservicecreateregisteredmodel
       requestBody:
         required: true
         description: Request body
@@ -801,6 +825,7 @@ paths:
                     description: ''
   /2.0/mlflow/registered-models/get:
     get:
+      operationId: modelregistryservicegetregisteredmodel
       parameters:
       - in: query
         name: name
@@ -821,6 +846,7 @@ paths:
                     description: ''
   /2.0/mlflow/registered-models/rename:
     post:
+      operationId: modelregistryservicerenameregisteredmodel
       requestBody:
         required: true
         description: Request body
@@ -851,6 +877,7 @@ paths:
                     description: ''
   /2.0/mlflow/registered-models/update:
     patch:
+      operationId: modelregistryserviceupdateregisteredmodel
       parameters:
       - in: query
         name: name
@@ -877,6 +904,7 @@ paths:
                     description: ''
   /2.0/mlflow/registered-models/delete:
     delete:
+      operationId: modelregistryservicedeleteregisteredmodel
       parameters:
       - in: query
         name: name
@@ -889,6 +917,7 @@ paths:
           description: OK
   /2.0/mlflow/registered-models/get-latest-versions:
     post:
+      operationId: modelregistryservicegetlatestversions
       requestBody:
         required: true
         description: Request body
@@ -926,6 +955,7 @@ paths:
                       ``"None"``.
   /2.0/mlflow/model-versions/create:
     post:
+      operationId: modelregistryservicecreatemodelversion
       requestBody:
         required: true
         description: Request body
@@ -975,6 +1005,7 @@ paths:
                       in registry.
   /2.0/mlflow/model-versions/get:
     get:
+      operationId: modelregistryservicegetmodelversion
       parameters:
       - in: query
         name: name
@@ -1001,6 +1032,7 @@ paths:
                     description: ''
   /2.0/mlflow/model-versions/update:
     patch:
+      operationId: modelregistryserviceupdatemodelversion
       parameters:
       - in: query
         name: name
@@ -1034,6 +1066,7 @@ paths:
                       in registry.
   /2.0/mlflow/model-versions/delete:
     delete:
+      operationId: modelregistryservicedeletemodelversion
       parameters:
       - in: query
         name: name
@@ -1052,6 +1085,7 @@ paths:
           description: OK
   /2.0/mlflow/model-versions/search:
     get:
+      operationId: modelregistryservicesearchmodelversions
       parameters:
       - in: query
         name: filter
@@ -1105,6 +1139,7 @@ paths:
                       the same search query.
   /2.0/mlflow/model-versions/get-download-uri:
     get:
+      operationId: modelregistryservicegetmodelversiondownloaduri
       parameters:
       - in: query
         name: name
@@ -1132,6 +1167,7 @@ paths:
                       version are stored.
   /2.0/mlflow/model-versions/transition-stage:
     post:
+      operationId: modelregistryservicetransitionmodelversionstage
       requestBody:
         required: true
         description: Request body
@@ -1176,6 +1212,7 @@ paths:
                     description: Updated model version
   /2.0/mlflow/registered-models/search:
     get:
+      operationId: modelregistryservicesearchregisteredmodels
       parameters:
       - in: query
         name: filter
@@ -1228,6 +1265,7 @@ paths:
                     description: Pagination token to request the next page of models.
   /2.0/mlflow/registered-models/set-tag:
     post:
+      operationId: modelregistryservicesetregisteredmodeltag
       requestBody:
         required: true
         description: Request body
@@ -1259,6 +1297,7 @@ paths:
           description: OK
   /2.0/mlflow/model-versions/set-tag:
     post:
+      operationId: modelregistryservicesetmodelversiontag
       requestBody:
         required: true
         description: Request body
@@ -1294,6 +1333,7 @@ paths:
           description: OK
   /2.0/mlflow/registered-models/delete-tag:
     delete:
+      operationId: modelregistryservicedeleteregisteredmodeltag
       parameters:
       - in: query
         name: name
@@ -1314,6 +1354,7 @@ paths:
           description: OK
   /2.0/mlflow/model-versions/delete-tag:
     delete:
+      operationId: modelregistryservicedeletemodelversiontag
       parameters:
       - in: query
         name: name
@@ -1341,6 +1382,7 @@ paths:
           description: OK
   /2.0/mlflow/registered-models/alias:
     post:
+      operationId: modelregistryservicesetregisteredmodelalias
       requestBody:
         required: true
         description: Request body

@@ -4,85 +4,54 @@ All URIs are relative to *http://localhost:5000/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**call_20_mlflow_artifacts_list_get**](DefaultApi.md#call_20_mlflow_artifacts_list_get) | **GET** /2.0/mlflow/artifacts/list | 
-[**call_20_mlflow_experiments_create_post**](DefaultApi.md#call_20_mlflow_experiments_create_post) | **POST** /2.0/mlflow/experiments/create | 
-[**call_20_mlflow_experiments_delete_post**](DefaultApi.md#call_20_mlflow_experiments_delete_post) | **POST** /2.0/mlflow/experiments/delete | 
-[**call_20_mlflow_experiments_get_by_name_get**](DefaultApi.md#call_20_mlflow_experiments_get_by_name_get) | **GET** /2.0/mlflow/experiments/get-by-name | 
-[**call_20_mlflow_experiments_get_get**](DefaultApi.md#call_20_mlflow_experiments_get_get) | **GET** /2.0/mlflow/experiments/get | 
-[**call_20_mlflow_experiments_restore_post**](DefaultApi.md#call_20_mlflow_experiments_restore_post) | **POST** /2.0/mlflow/experiments/restore | 
-[**call_20_mlflow_experiments_search_post**](DefaultApi.md#call_20_mlflow_experiments_search_post) | **POST** /2.0/mlflow/experiments/search | 
-[**call_20_mlflow_experiments_set_experiment_tag_post**](DefaultApi.md#call_20_mlflow_experiments_set_experiment_tag_post) | **POST** /2.0/mlflow/experiments/set-experiment-tag | 
-[**call_20_mlflow_experiments_update_post**](DefaultApi.md#call_20_mlflow_experiments_update_post) | **POST** /2.0/mlflow/experiments/update | 
-[**call_20_mlflow_metrics_get_history_get**](DefaultApi.md#call_20_mlflow_metrics_get_history_get) | **GET** /2.0/mlflow/metrics/get-history | 
-[**call_20_mlflow_model_versions_create_post**](DefaultApi.md#call_20_mlflow_model_versions_create_post) | **POST** /2.0/mlflow/model-versions/create | 
-[**call_20_mlflow_model_versions_delete_delete**](DefaultApi.md#call_20_mlflow_model_versions_delete_delete) | **DELETE** /2.0/mlflow/model-versions/delete | 
-[**call_20_mlflow_model_versions_delete_tag_delete**](DefaultApi.md#call_20_mlflow_model_versions_delete_tag_delete) | **DELETE** /2.0/mlflow/model-versions/delete-tag | 
-[**call_20_mlflow_model_versions_get_download_uri_get**](DefaultApi.md#call_20_mlflow_model_versions_get_download_uri_get) | **GET** /2.0/mlflow/model-versions/get-download-uri | 
-[**call_20_mlflow_model_versions_get_get**](DefaultApi.md#call_20_mlflow_model_versions_get_get) | **GET** /2.0/mlflow/model-versions/get | 
-[**call_20_mlflow_model_versions_search_get**](DefaultApi.md#call_20_mlflow_model_versions_search_get) | **GET** /2.0/mlflow/model-versions/search | 
-[**call_20_mlflow_model_versions_set_tag_post**](DefaultApi.md#call_20_mlflow_model_versions_set_tag_post) | **POST** /2.0/mlflow/model-versions/set-tag | 
-[**call_20_mlflow_model_versions_transition_stage_post**](DefaultApi.md#call_20_mlflow_model_versions_transition_stage_post) | **POST** /2.0/mlflow/model-versions/transition-stage | 
-[**call_20_mlflow_model_versions_update_patch**](DefaultApi.md#call_20_mlflow_model_versions_update_patch) | **PATCH** /2.0/mlflow/model-versions/update | 
-[**call_20_mlflow_registered_models_alias_post**](DefaultApi.md#call_20_mlflow_registered_models_alias_post) | **POST** /2.0/mlflow/registered-models/alias | 
-[**call_20_mlflow_registered_models_create_post**](DefaultApi.md#call_20_mlflow_registered_models_create_post) | **POST** /2.0/mlflow/registered-models/create | 
-[**call_20_mlflow_registered_models_delete_delete**](DefaultApi.md#call_20_mlflow_registered_models_delete_delete) | **DELETE** /2.0/mlflow/registered-models/delete | 
-[**call_20_mlflow_registered_models_delete_tag_delete**](DefaultApi.md#call_20_mlflow_registered_models_delete_tag_delete) | **DELETE** /2.0/mlflow/registered-models/delete-tag | 
-[**call_20_mlflow_registered_models_get_get**](DefaultApi.md#call_20_mlflow_registered_models_get_get) | **GET** /2.0/mlflow/registered-models/get | 
-[**call_20_mlflow_registered_models_get_latest_versions_post**](DefaultApi.md#call_20_mlflow_registered_models_get_latest_versions_post) | **POST** /2.0/mlflow/registered-models/get-latest-versions | 
-[**call_20_mlflow_registered_models_rename_post**](DefaultApi.md#call_20_mlflow_registered_models_rename_post) | **POST** /2.0/mlflow/registered-models/rename | 
-[**call_20_mlflow_registered_models_search_get**](DefaultApi.md#call_20_mlflow_registered_models_search_get) | **GET** /2.0/mlflow/registered-models/search | 
-[**call_20_mlflow_registered_models_set_tag_post**](DefaultApi.md#call_20_mlflow_registered_models_set_tag_post) | **POST** /2.0/mlflow/registered-models/set-tag | 
-[**call_20_mlflow_registered_models_update_patch**](DefaultApi.md#call_20_mlflow_registered_models_update_patch) | **PATCH** /2.0/mlflow/registered-models/update | 
-[**call_20_mlflow_runs_create_post**](DefaultApi.md#call_20_mlflow_runs_create_post) | **POST** /2.0/mlflow/runs/create | 
-[**call_20_mlflow_runs_delete_post**](DefaultApi.md#call_20_mlflow_runs_delete_post) | **POST** /2.0/mlflow/runs/delete | 
-[**call_20_mlflow_runs_delete_tag_post**](DefaultApi.md#call_20_mlflow_runs_delete_tag_post) | **POST** /2.0/mlflow/runs/delete-tag | 
-[**call_20_mlflow_runs_get_get**](DefaultApi.md#call_20_mlflow_runs_get_get) | **GET** /2.0/mlflow/runs/get | 
-[**call_20_mlflow_runs_log_batch_post**](DefaultApi.md#call_20_mlflow_runs_log_batch_post) | **POST** /2.0/mlflow/runs/log-batch | 
-[**call_20_mlflow_runs_log_inputs_post**](DefaultApi.md#call_20_mlflow_runs_log_inputs_post) | **POST** /2.0/mlflow/runs/log-inputs | 
-[**call_20_mlflow_runs_log_metric_post**](DefaultApi.md#call_20_mlflow_runs_log_metric_post) | **POST** /2.0/mlflow/runs/log-metric | 
-[**call_20_mlflow_runs_log_model_post**](DefaultApi.md#call_20_mlflow_runs_log_model_post) | **POST** /2.0/mlflow/runs/log-model | 
-[**call_20_mlflow_runs_log_parameter_post**](DefaultApi.md#call_20_mlflow_runs_log_parameter_post) | **POST** /2.0/mlflow/runs/log-parameter | 
-[**call_20_mlflow_runs_restore_post**](DefaultApi.md#call_20_mlflow_runs_restore_post) | **POST** /2.0/mlflow/runs/restore | 
-[**call_20_mlflow_runs_search_post**](DefaultApi.md#call_20_mlflow_runs_search_post) | **POST** /2.0/mlflow/runs/search | 
-[**call_20_mlflow_runs_set_tag_post**](DefaultApi.md#call_20_mlflow_runs_set_tag_post) | **POST** /2.0/mlflow/runs/set-tag | 
-[**call_20_mlflow_runs_update_post**](DefaultApi.md#call_20_mlflow_runs_update_post) | **POST** /2.0/mlflow/runs/update | 
+[**mlflowservicecreateexperiment**](DefaultApi.md#mlflowservicecreateexperiment) | **POST** /2.0/mlflow/experiments/create | 
+[**mlflowservicecreaterun**](DefaultApi.md#mlflowservicecreaterun) | **POST** /2.0/mlflow/runs/create | 
+[**mlflowservicedeleteexperiment**](DefaultApi.md#mlflowservicedeleteexperiment) | **POST** /2.0/mlflow/experiments/delete | 
+[**mlflowservicedeleterun**](DefaultApi.md#mlflowservicedeleterun) | **POST** /2.0/mlflow/runs/delete | 
+[**mlflowservicedeletetag**](DefaultApi.md#mlflowservicedeletetag) | **POST** /2.0/mlflow/runs/delete-tag | 
+[**mlflowservicegetexperiment**](DefaultApi.md#mlflowservicegetexperiment) | **GET** /2.0/mlflow/experiments/get | 
+[**mlflowservicegetexperimentbyname**](DefaultApi.md#mlflowservicegetexperimentbyname) | **GET** /2.0/mlflow/experiments/get-by-name | 
+[**mlflowservicegetmetrichistory**](DefaultApi.md#mlflowservicegetmetrichistory) | **GET** /2.0/mlflow/metrics/get-history | 
+[**mlflowservicegetrun**](DefaultApi.md#mlflowservicegetrun) | **GET** /2.0/mlflow/runs/get | 
+[**mlflowservicelistartifacts**](DefaultApi.md#mlflowservicelistartifacts) | **GET** /2.0/mlflow/artifacts/list | 
+[**mlflowservicelogbatch**](DefaultApi.md#mlflowservicelogbatch) | **POST** /2.0/mlflow/runs/log-batch | 
+[**mlflowserviceloginputs**](DefaultApi.md#mlflowserviceloginputs) | **POST** /2.0/mlflow/runs/log-inputs | 
+[**mlflowservicelogmetric**](DefaultApi.md#mlflowservicelogmetric) | **POST** /2.0/mlflow/runs/log-metric | 
+[**mlflowservicelogmodel**](DefaultApi.md#mlflowservicelogmodel) | **POST** /2.0/mlflow/runs/log-model | 
+[**mlflowservicelogparam**](DefaultApi.md#mlflowservicelogparam) | **POST** /2.0/mlflow/runs/log-parameter | 
+[**mlflowservicerestoreexperiment**](DefaultApi.md#mlflowservicerestoreexperiment) | **POST** /2.0/mlflow/experiments/restore | 
+[**mlflowservicerestorerun**](DefaultApi.md#mlflowservicerestorerun) | **POST** /2.0/mlflow/runs/restore | 
+[**mlflowservicesearchexperiments**](DefaultApi.md#mlflowservicesearchexperiments) | **POST** /2.0/mlflow/experiments/search | 
+[**mlflowservicesearchruns**](DefaultApi.md#mlflowservicesearchruns) | **POST** /2.0/mlflow/runs/search | 
+[**mlflowservicesetexperimenttag**](DefaultApi.md#mlflowservicesetexperimenttag) | **POST** /2.0/mlflow/experiments/set-experiment-tag | 
+[**mlflowservicesettag**](DefaultApi.md#mlflowservicesettag) | **POST** /2.0/mlflow/runs/set-tag | 
+[**mlflowserviceupdateexperiment**](DefaultApi.md#mlflowserviceupdateexperiment) | **POST** /2.0/mlflow/experiments/update | 
+[**mlflowserviceupdaterun**](DefaultApi.md#mlflowserviceupdaterun) | **POST** /2.0/mlflow/runs/update | 
+[**modelregistryservicecreatemodelversion**](DefaultApi.md#modelregistryservicecreatemodelversion) | **POST** /2.0/mlflow/model-versions/create | 
+[**modelregistryservicecreateregisteredmodel**](DefaultApi.md#modelregistryservicecreateregisteredmodel) | **POST** /2.0/mlflow/registered-models/create | 
+[**modelregistryservicedeletemodelversion**](DefaultApi.md#modelregistryservicedeletemodelversion) | **DELETE** /2.0/mlflow/model-versions/delete | 
+[**modelregistryservicedeletemodelversiontag**](DefaultApi.md#modelregistryservicedeletemodelversiontag) | **DELETE** /2.0/mlflow/model-versions/delete-tag | 
+[**modelregistryservicedeleteregisteredmodel**](DefaultApi.md#modelregistryservicedeleteregisteredmodel) | **DELETE** /2.0/mlflow/registered-models/delete | 
+[**modelregistryservicedeleteregisteredmodeltag**](DefaultApi.md#modelregistryservicedeleteregisteredmodeltag) | **DELETE** /2.0/mlflow/registered-models/delete-tag | 
+[**modelregistryservicegetlatestversions**](DefaultApi.md#modelregistryservicegetlatestversions) | **POST** /2.0/mlflow/registered-models/get-latest-versions | 
+[**modelregistryservicegetmodelversion**](DefaultApi.md#modelregistryservicegetmodelversion) | **GET** /2.0/mlflow/model-versions/get | 
+[**modelregistryservicegetmodelversiondownloaduri**](DefaultApi.md#modelregistryservicegetmodelversiondownloaduri) | **GET** /2.0/mlflow/model-versions/get-download-uri | 
+[**modelregistryservicegetregisteredmodel**](DefaultApi.md#modelregistryservicegetregisteredmodel) | **GET** /2.0/mlflow/registered-models/get | 
+[**modelregistryservicerenameregisteredmodel**](DefaultApi.md#modelregistryservicerenameregisteredmodel) | **POST** /2.0/mlflow/registered-models/rename | 
+[**modelregistryservicesearchmodelversions**](DefaultApi.md#modelregistryservicesearchmodelversions) | **GET** /2.0/mlflow/model-versions/search | 
+[**modelregistryservicesearchregisteredmodels**](DefaultApi.md#modelregistryservicesearchregisteredmodels) | **GET** /2.0/mlflow/registered-models/search | 
+[**modelregistryservicesetmodelversiontag**](DefaultApi.md#modelregistryservicesetmodelversiontag) | **POST** /2.0/mlflow/model-versions/set-tag | 
+[**modelregistryservicesetregisteredmodelalias**](DefaultApi.md#modelregistryservicesetregisteredmodelalias) | **POST** /2.0/mlflow/registered-models/alias | 
+[**modelregistryservicesetregisteredmodeltag**](DefaultApi.md#modelregistryservicesetregisteredmodeltag) | **POST** /2.0/mlflow/registered-models/set-tag | 
+[**modelregistryservicetransitionmodelversionstage**](DefaultApi.md#modelregistryservicetransitionmodelversionstage) | **POST** /2.0/mlflow/model-versions/transition-stage | 
+[**modelregistryserviceupdatemodelversion**](DefaultApi.md#modelregistryserviceupdatemodelversion) | **PATCH** /2.0/mlflow/model-versions/update | 
+[**modelregistryserviceupdateregisteredmodel**](DefaultApi.md#modelregistryserviceupdateregisteredmodel) | **PATCH** /2.0/mlflow/registered-models/update | 
 
 
 
-## call_20_mlflow_artifacts_list_get
+## mlflowservicecreateexperiment
 
-> models::Model20MlflowArtifactsListGet200Response call_20_mlflow_artifacts_list_get(run_id, run_uuid, path, page_token)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**run_id** | Option<**String**> | ID of the run whose artifacts to list. Must be provided. |  |
-**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run whose artifacts to list. This field will be removed in a future MLflow version. |  |
-**path** | Option<**String**> | Filter artifacts matching this path (a relative path from the root artifact directory). |  |
-**page_token** | Option<**String**> | Token indicating the page of artifact results to fetch |  |
-
-### Return type
-
-[**models::Model20MlflowArtifactsListGet200Response**](_2_0_mlflow_artifacts_list_get_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_experiments_create_post
-
-> models::Model20MlflowExperimentsCreatePost200Response call_20_mlflow_experiments_create_post(model20_mlflow_experiments_create_post_request)
+> models::Mlflowservicecreateexperiment200Response mlflowservicecreateexperiment(mlflowservicecreateexperiment_request)
 
 
 ### Parameters
@@ -90,11 +59,11 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_create_post_request** | [**Model20MlflowExperimentsCreatePostRequest**](Model20MlflowExperimentsCreatePostRequest.md) | Request body | [required] |
+**mlflowservicecreateexperiment_request** | [**MlflowservicecreateexperimentRequest**](MlflowservicecreateexperimentRequest.md) | Request body | [required] |
 
 ### Return type
 
-[**models::Model20MlflowExperimentsCreatePost200Response**](_2_0_mlflow_experiments_create_post_200_response.md)
+[**models::Mlflowservicecreateexperiment200Response**](mlflowservicecreateexperiment_200_response.md)
 
 ### Authorization
 
@@ -108,9 +77,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_experiments_delete_post
+## mlflowservicecreaterun
 
-> call_20_mlflow_experiments_delete_post(model20_mlflow_experiments_delete_post_request)
+> models::Mlflowservicecreaterun200Response mlflowservicecreaterun(mlflowservicecreaterun_request)
 
 
 ### Parameters
@@ -118,7 +87,35 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_delete_post_request** | [**Model20MlflowExperimentsDeletePostRequest**](Model20MlflowExperimentsDeletePostRequest.md) | Request body | [required] |
+**mlflowservicecreaterun_request** | Option<[**MlflowservicecreaterunRequest**](MlflowservicecreaterunRequest.md)> | Request body |  |
+
+### Return type
+
+[**models::Mlflowservicecreaterun200Response**](mlflowservicecreaterun_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicedeleteexperiment
+
+> mlflowservicedeleteexperiment(mlflowservicedeleteexperiment_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicedeleteexperiment_request** | [**MlflowservicedeleteexperimentRequest**](MlflowservicedeleteexperimentRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -136,9 +133,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_experiments_get_by_name_get
+## mlflowservicedeleterun
 
-> models::Model20MlflowExperimentsGetGet200Response call_20_mlflow_experiments_get_by_name_get(experiment_name)
+> mlflowservicedeleterun(mlflowservicedeleterun_request)
 
 
 ### Parameters
@@ -146,11 +143,11 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**experiment_name** | **String** | Name of the associated experiment. This field is required. | [required] |
+**mlflowservicedeleterun_request** | [**MlflowservicedeleterunRequest**](MlflowservicedeleterunRequest.md) | Request body | [required] |
 
 ### Return type
 
-[**models::Model20MlflowExperimentsGetGet200Response**](_2_0_mlflow_experiments_get_get_200_response.md)
+ (empty response body)
 
 ### Authorization
 
@@ -158,15 +155,43 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json
+- **Content-Type**: application/json
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_experiments_get_get
+## mlflowservicedeletetag
 
-> models::Model20MlflowExperimentsGetGet200Response call_20_mlflow_experiments_get_get(experiment_id)
+> mlflowservicedeletetag(mlflowservicedeletetag_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicedeletetag_request** | [**MlflowservicedeletetagRequest**](MlflowservicedeletetagRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicegetexperiment
+
+> models::Mlflowservicegetexperiment200Response mlflowservicegetexperiment(experiment_id)
 
 
 ### Parameters
@@ -178,7 +203,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Model20MlflowExperimentsGetGet200Response**](_2_0_mlflow_experiments_get_get_200_response.md)
+[**models::Mlflowservicegetexperiment200Response**](mlflowservicegetexperiment_200_response.md)
 
 ### Authorization
 
@@ -192,37 +217,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_experiments_restore_post
+## mlflowservicegetexperimentbyname
 
-> call_20_mlflow_experiments_restore_post(model20_mlflow_experiments_delete_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_delete_post_request** | [**Model20MlflowExperimentsDeletePostRequest**](Model20MlflowExperimentsDeletePostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_experiments_search_post
-
-> models::Model20MlflowExperimentsSearchPost200Response call_20_mlflow_experiments_search_post(model20_mlflow_experiments_search_post_request)
+> models::Mlflowservicegetexperiment200Response mlflowservicegetexperimentbyname(experiment_name)
 
 
 ### Parameters
@@ -230,11 +227,11 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_search_post_request** | Option<[**Model20MlflowExperimentsSearchPostRequest**](Model20MlflowExperimentsSearchPostRequest.md)> | Request body |  |
+**experiment_name** | **String** | Name of the associated experiment. This field is required. | [required] |
 
 ### Return type
 
-[**models::Model20MlflowExperimentsSearchPost200Response**](_2_0_mlflow_experiments_search_post_200_response.md)
+[**models::Mlflowservicegetexperiment200Response**](mlflowservicegetexperiment_200_response.md)
 
 ### Authorization
 
@@ -242,71 +239,15 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_experiments_set_experiment_tag_post
+## mlflowservicegetmetrichistory
 
-> call_20_mlflow_experiments_set_experiment_tag_post(model20_mlflow_experiments_set_experiment_tag_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_set_experiment_tag_post_request** | [**Model20MlflowExperimentsSetExperimentTagPostRequest**](Model20MlflowExperimentsSetExperimentTagPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_experiments_update_post
-
-> call_20_mlflow_experiments_update_post(model20_mlflow_experiments_update_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_experiments_update_post_request** | [**Model20MlflowExperimentsUpdatePostRequest**](Model20MlflowExperimentsUpdatePostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_metrics_get_history_get
-
-> models::Model20MlflowMetricsGetHistoryGet200Response call_20_mlflow_metrics_get_history_get(metric_key, run_id, run_uuid, page_token, max_results)
+> models::Mlflowservicegetmetrichistory200Response mlflowservicegetmetrichistory(metric_key, run_id, run_uuid, page_token, max_results)
 
 
 ### Parameters
@@ -322,7 +263,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Model20MlflowMetricsGetHistoryGet200Response**](_2_0_mlflow_metrics_get_history_get_200_response.md)
+[**models::Mlflowservicegetmetrichistory200Response**](mlflowservicegetmetrichistory_200_response.md)
 
 ### Authorization
 
@@ -336,9 +277,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_model_versions_create_post
+## mlflowservicegetrun
 
-> models::Model20MlflowModelVersionsCreatePost200Response call_20_mlflow_model_versions_create_post(model20_mlflow_model_versions_create_post_request)
+> models::Mlflowservicecreaterun200Response mlflowservicegetrun(run_id, run_uuid)
 
 
 ### Parameters
@@ -346,11 +287,267 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_model_versions_create_post_request** | [**Model20MlflowModelVersionsCreatePostRequest**](Model20MlflowModelVersionsCreatePostRequest.md) | Request body | [required] |
+**run_id** | Option<**String**> | ID of the run to fetch. Must be provided. |  |
+**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run to fetch. This field will be removed in a future MLflow version. |  |
 
 ### Return type
 
-[**models::Model20MlflowModelVersionsCreatePost200Response**](_2_0_mlflow_model_versions_create_post_200_response.md)
+[**models::Mlflowservicecreaterun200Response**](mlflowservicecreaterun_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicelistartifacts
+
+> models::Mlflowservicelistartifacts200Response mlflowservicelistartifacts(run_id, run_uuid, path, page_token)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**run_id** | Option<**String**> | ID of the run whose artifacts to list. Must be provided. |  |
+**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run whose artifacts to list. This field will be removed in a future MLflow version. |  |
+**path** | Option<**String**> | Filter artifacts matching this path (a relative path from the root artifact directory). |  |
+**page_token** | Option<**String**> | Token indicating the page of artifact results to fetch |  |
+
+### Return type
+
+[**models::Mlflowservicelistartifacts200Response**](mlflowservicelistartifacts_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicelogbatch
+
+> mlflowservicelogbatch(mlflowservicelogbatch_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicelogbatch_request** | Option<[**MlflowservicelogbatchRequest**](MlflowservicelogbatchRequest.md)> | Request body |  |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowserviceloginputs
+
+> mlflowserviceloginputs(mlflowserviceloginputs_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowserviceloginputs_request** | [**MlflowserviceloginputsRequest**](MlflowserviceloginputsRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicelogmetric
+
+> mlflowservicelogmetric(mlflowservicelogmetric_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicelogmetric_request** | [**MlflowservicelogmetricRequest**](MlflowservicelogmetricRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicelogmodel
+
+> mlflowservicelogmodel(mlflowservicelogmodel_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicelogmodel_request** | Option<[**MlflowservicelogmodelRequest**](MlflowservicelogmodelRequest.md)> | Request body |  |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicelogparam
+
+> mlflowservicelogparam(mlflowservicelogparam_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicelogparam_request** | [**MlflowservicelogparamRequest**](MlflowservicelogparamRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicerestoreexperiment
+
+> mlflowservicerestoreexperiment(mlflowservicedeleteexperiment_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicedeleteexperiment_request** | [**MlflowservicedeleteexperimentRequest**](MlflowservicedeleteexperimentRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicerestorerun
+
+> mlflowservicerestorerun(mlflowservicerestorerun_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicerestorerun_request** | [**MlflowservicerestorerunRequest**](MlflowservicerestorerunRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicesearchexperiments
+
+> models::Mlflowservicesearchexperiments200Response mlflowservicesearchexperiments(mlflowservicesearchexperiments_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicesearchexperiments_request** | Option<[**MlflowservicesearchexperimentsRequest**](MlflowservicesearchexperimentsRequest.md)> | Request body |  |
+
+### Return type
+
+[**models::Mlflowservicesearchexperiments200Response**](mlflowservicesearchexperiments_200_response.md)
 
 ### Authorization
 
@@ -364,9 +561,205 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_model_versions_delete_delete
+## mlflowservicesearchruns
 
-> call_20_mlflow_model_versions_delete_delete(name, version)
+> models::Mlflowservicesearchruns200Response mlflowservicesearchruns(mlflowservicesearchruns_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicesearchruns_request** | Option<[**MlflowservicesearchrunsRequest**](MlflowservicesearchrunsRequest.md)> | Request body |  |
+
+### Return type
+
+[**models::Mlflowservicesearchruns200Response**](mlflowservicesearchruns_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicesetexperimenttag
+
+> mlflowservicesetexperimenttag(mlflowservicesetexperimenttag_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicesetexperimenttag_request** | [**MlflowservicesetexperimenttagRequest**](MlflowservicesetexperimenttagRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowservicesettag
+
+> mlflowservicesettag(mlflowservicesettag_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowservicesettag_request** | [**MlflowservicesettagRequest**](MlflowservicesettagRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowserviceupdateexperiment
+
+> mlflowserviceupdateexperiment(mlflowserviceupdateexperiment_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowserviceupdateexperiment_request** | [**MlflowserviceupdateexperimentRequest**](MlflowserviceupdateexperimentRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## mlflowserviceupdaterun
+
+> models::Mlflowserviceupdaterun200Response mlflowserviceupdaterun(mlflowserviceupdaterun_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**mlflowserviceupdaterun_request** | Option<[**MlflowserviceupdaterunRequest**](MlflowserviceupdaterunRequest.md)> | Request body |  |
+
+### Return type
+
+[**models::Mlflowserviceupdaterun200Response**](mlflowserviceupdaterun_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicecreatemodelversion
+
+> models::Modelregistryservicecreatemodelversion200Response modelregistryservicecreatemodelversion(modelregistryservicecreatemodelversion_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**modelregistryservicecreatemodelversion_request** | [**ModelregistryservicecreatemodelversionRequest**](ModelregistryservicecreatemodelversionRequest.md) | Request body | [required] |
+
+### Return type
+
+[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicecreateregisteredmodel
+
+> models::Modelregistryservicecreateregisteredmodel200Response modelregistryservicecreateregisteredmodel(modelregistryservicecreateregisteredmodel_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**modelregistryservicecreateregisteredmodel_request** | [**ModelregistryservicecreateregisteredmodelRequest**](ModelregistryservicecreateregisteredmodelRequest.md) | Request body | [required] |
+
+### Return type
+
+[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicedeletemodelversion
+
+> modelregistryservicedeletemodelversion(name, version)
 
 
 ### Parameters
@@ -393,9 +786,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_model_versions_delete_tag_delete
+## modelregistryservicedeletemodelversiontag
 
-> call_20_mlflow_model_versions_delete_tag_delete(name, version, key)
+> modelregistryservicedeletemodelversiontag(name, version, key)
 
 
 ### Parameters
@@ -423,240 +816,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_model_versions_get_download_uri_get
+## modelregistryservicedeleteregisteredmodel
 
-> models::Model20MlflowModelVersionsGetDownloadUriGet200Response call_20_mlflow_model_versions_get_download_uri_get(name, version)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** | Name of the registered model This field is required. | [required] |
-**version** | **String** | Model version number This field is required. | [required] |
-
-### Return type
-
-[**models::Model20MlflowModelVersionsGetDownloadUriGet200Response**](_2_0_mlflow_model_versions_get_download_uri_get_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_model_versions_get_get
-
-> models::Model20MlflowModelVersionsCreatePost200Response call_20_mlflow_model_versions_get_get(name, version)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** | Name of the registered model This field is required. | [required] |
-**version** | **String** | Model version number This field is required. | [required] |
-
-### Return type
-
-[**models::Model20MlflowModelVersionsCreatePost200Response**](_2_0_mlflow_model_versions_create_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_model_versions_search_get
-
-> models::Model20MlflowModelVersionsSearchGet200Response call_20_mlflow_model_versions_search_get(filter, max_results, order_by, page_token)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**filter** | Option<**String**> | String filter condition, like \"name='my-model-name'\". Must be a single boolean condition, with string values wrapped in single quotes. |  |
-**max_results** | Option<**i64**> | Maximum number of models desired. Max threshold is 200K. Backends may choose a lower default value and maximum threshold. |  |
-**order_by** | Option<[**Vec<String>**](String.md)> | List of columns to be ordered by including model name, version, stage with an optional \"DESC\" or \"ASC\" annotation, where \"ASC\" is the default. Tiebreaks are done by latest stage transition timestamp, followed by name ASC, followed by version DESC. |  |
-**page_token** | Option<**String**> | Pagination token to go to next page based on previous search query. |  |
-
-### Return type
-
-[**models::Model20MlflowModelVersionsSearchGet200Response**](_2_0_mlflow_model_versions_search_get_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_model_versions_set_tag_post
-
-> call_20_mlflow_model_versions_set_tag_post(model20_mlflow_model_versions_set_tag_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_model_versions_set_tag_post_request** | [**Model20MlflowModelVersionsSetTagPostRequest**](Model20MlflowModelVersionsSetTagPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_model_versions_transition_stage_post
-
-> models::Model20MlflowModelVersionsCreatePost200Response call_20_mlflow_model_versions_transition_stage_post(model20_mlflow_model_versions_transition_stage_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_model_versions_transition_stage_post_request** | [**Model20MlflowModelVersionsTransitionStagePostRequest**](Model20MlflowModelVersionsTransitionStagePostRequest.md) | Request body | [required] |
-
-### Return type
-
-[**models::Model20MlflowModelVersionsCreatePost200Response**](_2_0_mlflow_model_versions_create_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_model_versions_update_patch
-
-> models::Model20MlflowModelVersionsCreatePost200Response call_20_mlflow_model_versions_update_patch(name, version, description)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** | Name of the registered model This field is required. | [required] |
-**version** | **String** | Model version number This field is required. | [required] |
-**description** | Option<**String**> | If provided, updates the description for this ``registered_model``. |  |
-
-### Return type
-
-[**models::Model20MlflowModelVersionsCreatePost200Response**](_2_0_mlflow_model_versions_create_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_registered_models_alias_post
-
-> call_20_mlflow_registered_models_alias_post(model20_mlflow_registered_models_alias_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_alias_post_request** | [**Model20MlflowRegisteredModelsAliasPostRequest**](Model20MlflowRegisteredModelsAliasPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_registered_models_create_post
-
-> models::Model20MlflowRegisteredModelsCreatePost200Response call_20_mlflow_registered_models_create_post(model20_mlflow_registered_models_create_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_create_post_request** | [**Model20MlflowRegisteredModelsCreatePostRequest**](Model20MlflowRegisteredModelsCreatePostRequest.md) | Request body | [required] |
-
-### Return type
-
-[**models::Model20MlflowRegisteredModelsCreatePost200Response**](_2_0_mlflow_registered_models_create_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_registered_models_delete_delete
-
-> call_20_mlflow_registered_models_delete_delete(name)
+> modelregistryservicedeleteregisteredmodel(name)
 
 
 ### Parameters
@@ -682,9 +844,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_delete_tag_delete
+## modelregistryservicedeleteregisteredmodeltag
 
-> call_20_mlflow_registered_models_delete_tag_delete(name, key)
+> modelregistryservicedeleteregisteredmodeltag(name, key)
 
 
 ### Parameters
@@ -711,9 +873,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_get_get
+## modelregistryservicegetlatestversions
 
-> models::Model20MlflowRegisteredModelsCreatePost200Response call_20_mlflow_registered_models_get_get(name)
+> models::Modelregistryservicegetlatestversions200Response modelregistryservicegetlatestversions(modelregistryservicegetlatestversions_request)
 
 
 ### Parameters
@@ -721,11 +883,40 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** | Registered model unique name identifier. This field is required. | [required] |
+**modelregistryservicegetlatestversions_request** | [**ModelregistryservicegetlatestversionsRequest**](ModelregistryservicegetlatestversionsRequest.md) | Request body | [required] |
 
 ### Return type
 
-[**models::Model20MlflowRegisteredModelsCreatePost200Response**](_2_0_mlflow_registered_models_create_post_200_response.md)
+[**models::Modelregistryservicegetlatestversions200Response**](modelregistryservicegetlatestversions_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicegetmodelversion
+
+> models::Modelregistryservicecreatemodelversion200Response modelregistryservicegetmodelversion(name, version)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
+
+### Return type
+
+[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
 
 ### Authorization
 
@@ -739,9 +930,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_get_latest_versions_post
+## modelregistryservicegetmodelversiondownloaduri
 
-> models::Model20MlflowRegisteredModelsGetLatestVersionsPost200Response call_20_mlflow_registered_models_get_latest_versions_post(model20_mlflow_registered_models_get_latest_versions_post_request)
+> models::Modelregistryservicegetmodelversiondownloaduri200Response modelregistryservicegetmodelversiondownloaduri(name, version)
 
 
 ### Parameters
@@ -749,11 +940,68 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_get_latest_versions_post_request** | [**Model20MlflowRegisteredModelsGetLatestVersionsPostRequest**](Model20MlflowRegisteredModelsGetLatestVersionsPostRequest.md) | Request body | [required] |
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
 
 ### Return type
 
-[**models::Model20MlflowRegisteredModelsGetLatestVersionsPost200Response**](_2_0_mlflow_registered_models_get_latest_versions_post_200_response.md)
+[**models::Modelregistryservicegetmodelversiondownloaduri200Response**](modelregistryservicegetmodelversiondownloaduri_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicegetregisteredmodel
+
+> models::Modelregistryservicecreateregisteredmodel200Response modelregistryservicegetregisteredmodel(name)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Registered model unique name identifier. This field is required. | [required] |
+
+### Return type
+
+[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicerenameregisteredmodel
+
+> models::Modelregistryservicecreateregisteredmodel200Response modelregistryservicerenameregisteredmodel(modelregistryservicerenameregisteredmodel_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**modelregistryservicerenameregisteredmodel_request** | [**ModelregistryservicerenameregisteredmodelRequest**](ModelregistryservicerenameregisteredmodelRequest.md) | Request body | [required] |
+
+### Return type
+
+[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
 
 ### Authorization
 
@@ -767,9 +1015,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_rename_post
+## modelregistryservicesearchmodelversions
 
-> models::Model20MlflowRegisteredModelsCreatePost200Response call_20_mlflow_registered_models_rename_post(model20_mlflow_registered_models_rename_post_request)
+> models::Modelregistryservicesearchmodelversions200Response modelregistryservicesearchmodelversions(filter, max_results, order_by, page_token)
 
 
 ### Parameters
@@ -777,11 +1025,14 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_rename_post_request** | [**Model20MlflowRegisteredModelsRenamePostRequest**](Model20MlflowRegisteredModelsRenamePostRequest.md) | Request body | [required] |
+**filter** | Option<**String**> | String filter condition, like \"name='my-model-name'\". Must be a single boolean condition, with string values wrapped in single quotes. |  |
+**max_results** | Option<**i64**> | Maximum number of models desired. Max threshold is 200K. Backends may choose a lower default value and maximum threshold. |  |
+**order_by** | Option<[**Vec<String>**](String.md)> | List of columns to be ordered by including model name, version, stage with an optional \"DESC\" or \"ASC\" annotation, where \"ASC\" is the default. Tiebreaks are done by latest stage transition timestamp, followed by name ASC, followed by version DESC. |  |
+**page_token** | Option<**String**> | Pagination token to go to next page based on previous search query. |  |
 
 ### Return type
 
-[**models::Model20MlflowRegisteredModelsCreatePost200Response**](_2_0_mlflow_registered_models_create_post_200_response.md)
+[**models::Modelregistryservicesearchmodelversions200Response**](modelregistryservicesearchmodelversions_200_response.md)
 
 ### Authorization
 
@@ -789,15 +1040,15 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_search_get
+## modelregistryservicesearchregisteredmodels
 
-> models::Model20MlflowRegisteredModelsSearchGet200Response call_20_mlflow_registered_models_search_get(filter, max_results, order_by, page_token)
+> models::Modelregistryservicesearchregisteredmodels200Response modelregistryservicesearchregisteredmodels(filter, max_results, order_by, page_token)
 
 
 ### Parameters
@@ -812,7 +1063,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Model20MlflowRegisteredModelsSearchGet200Response**](_2_0_mlflow_registered_models_search_get_200_response.md)
+[**models::Modelregistryservicesearchregisteredmodels200Response**](modelregistryservicesearchregisteredmodels_200_response.md)
 
 ### Authorization
 
@@ -826,9 +1077,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_set_tag_post
+## modelregistryservicesetmodelversiontag
 
-> call_20_mlflow_registered_models_set_tag_post(model20_mlflow_registered_models_set_tag_post_request)
+> modelregistryservicesetmodelversiontag(modelregistryservicesetmodelversiontag_request)
 
 
 ### Parameters
@@ -836,7 +1087,7 @@ No authorization required
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_registered_models_set_tag_post_request** | [**Model20MlflowRegisteredModelsSetTagPostRequest**](Model20MlflowRegisteredModelsSetTagPostRequest.md) | Request body | [required] |
+**modelregistryservicesetmodelversiontag_request** | [**ModelregistryservicesetmodelversiontagRequest**](ModelregistryservicesetmodelversiontagRequest.md) | Request body | [required] |
 
 ### Return type
 
@@ -854,9 +1105,123 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## call_20_mlflow_registered_models_update_patch
+## modelregistryservicesetregisteredmodelalias
 
-> models::Model20MlflowRegisteredModelsCreatePost200Response call_20_mlflow_registered_models_update_patch(name, description)
+> modelregistryservicesetregisteredmodelalias(modelregistryservicesetregisteredmodelalias_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**modelregistryservicesetregisteredmodelalias_request** | [**ModelregistryservicesetregisteredmodelaliasRequest**](ModelregistryservicesetregisteredmodelaliasRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicesetregisteredmodeltag
+
+> modelregistryservicesetregisteredmodeltag(modelregistryservicesetregisteredmodeltag_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**modelregistryservicesetregisteredmodeltag_request** | [**ModelregistryservicesetregisteredmodeltagRequest**](ModelregistryservicesetregisteredmodeltagRequest.md) | Request body | [required] |
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryservicetransitionmodelversionstage
+
+> models::Modelregistryservicecreatemodelversion200Response modelregistryservicetransitionmodelversionstage(modelregistryservicetransitionmodelversionstage_request)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**modelregistryservicetransitionmodelversionstage_request** | [**ModelregistryservicetransitionmodelversionstageRequest**](ModelregistryservicetransitionmodelversionstageRequest.md) | Request body | [required] |
+
+### Return type
+
+[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryserviceupdatemodelversion
+
+> models::Modelregistryservicecreatemodelversion200Response modelregistryserviceupdatemodelversion(name, version, description)
+
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of the registered model This field is required. | [required] |
+**version** | **String** | Model version number This field is required. | [required] |
+**description** | Option<**String**> | If provided, updates the description for this ``registered_model``. |  |
+
+### Return type
+
+[**models::Modelregistryservicecreatemodelversion200Response**](modelregistryservicecreatemodelversion_200_response.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## modelregistryserviceupdateregisteredmodel
+
+> models::Modelregistryservicecreateregisteredmodel200Response modelregistryserviceupdateregisteredmodel(name, description)
 
 
 ### Parameters
@@ -869,7 +1234,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::Model20MlflowRegisteredModelsCreatePost200Response**](_2_0_mlflow_registered_models_create_post_200_response.md)
+[**models::Modelregistryservicecreateregisteredmodel200Response**](modelregistryservicecreateregisteredmodel_200_response.md)
 
 ### Authorization
 
@@ -878,371 +1243,6 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_create_post
-
-> models::Model20MlflowRunsCreatePost200Response call_20_mlflow_runs_create_post(model20_mlflow_runs_create_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_create_post_request** | Option<[**Model20MlflowRunsCreatePostRequest**](Model20MlflowRunsCreatePostRequest.md)> | Request body |  |
-
-### Return type
-
-[**models::Model20MlflowRunsCreatePost200Response**](_2_0_mlflow_runs_create_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_delete_post
-
-> call_20_mlflow_runs_delete_post(model20_mlflow_runs_delete_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_delete_post_request** | [**Model20MlflowRunsDeletePostRequest**](Model20MlflowRunsDeletePostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_delete_tag_post
-
-> call_20_mlflow_runs_delete_tag_post(model20_mlflow_runs_delete_tag_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_delete_tag_post_request** | [**Model20MlflowRunsDeleteTagPostRequest**](Model20MlflowRunsDeleteTagPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_get_get
-
-> models::Model20MlflowRunsCreatePost200Response call_20_mlflow_runs_get_get(run_id, run_uuid)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**run_id** | Option<**String**> | ID of the run to fetch. Must be provided. |  |
-**run_uuid** | Option<**String**> | [Deprecated, use run_id instead] ID of the run to fetch. This field will be removed in a future MLflow version. |  |
-
-### Return type
-
-[**models::Model20MlflowRunsCreatePost200Response**](_2_0_mlflow_runs_create_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_log_batch_post
-
-> call_20_mlflow_runs_log_batch_post(model20_mlflow_runs_log_batch_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_batch_post_request** | Option<[**Model20MlflowRunsLogBatchPostRequest**](Model20MlflowRunsLogBatchPostRequest.md)> | Request body |  |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_log_inputs_post
-
-> call_20_mlflow_runs_log_inputs_post(model20_mlflow_runs_log_inputs_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_inputs_post_request** | [**Model20MlflowRunsLogInputsPostRequest**](Model20MlflowRunsLogInputsPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_log_metric_post
-
-> call_20_mlflow_runs_log_metric_post(model20_mlflow_runs_log_metric_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_metric_post_request** | [**Model20MlflowRunsLogMetricPostRequest**](Model20MlflowRunsLogMetricPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_log_model_post
-
-> call_20_mlflow_runs_log_model_post(model20_mlflow_runs_log_model_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_model_post_request** | Option<[**Model20MlflowRunsLogModelPostRequest**](Model20MlflowRunsLogModelPostRequest.md)> | Request body |  |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_log_parameter_post
-
-> call_20_mlflow_runs_log_parameter_post(model20_mlflow_runs_log_parameter_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_log_parameter_post_request** | [**Model20MlflowRunsLogParameterPostRequest**](Model20MlflowRunsLogParameterPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_restore_post
-
-> call_20_mlflow_runs_restore_post(model20_mlflow_runs_restore_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_restore_post_request** | [**Model20MlflowRunsRestorePostRequest**](Model20MlflowRunsRestorePostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_search_post
-
-> models::Model20MlflowRunsSearchPost200Response call_20_mlflow_runs_search_post(model20_mlflow_runs_search_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_search_post_request** | Option<[**Model20MlflowRunsSearchPostRequest**](Model20MlflowRunsSearchPostRequest.md)> | Request body |  |
-
-### Return type
-
-[**models::Model20MlflowRunsSearchPost200Response**](_2_0_mlflow_runs_search_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_set_tag_post
-
-> call_20_mlflow_runs_set_tag_post(model20_mlflow_runs_set_tag_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_set_tag_post_request** | [**Model20MlflowRunsSetTagPostRequest**](Model20MlflowRunsSetTagPostRequest.md) | Request body | [required] |
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## call_20_mlflow_runs_update_post
-
-> models::Model20MlflowRunsUpdatePost200Response call_20_mlflow_runs_update_post(model20_mlflow_runs_update_post_request)
-
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**model20_mlflow_runs_update_post_request** | Option<[**Model20MlflowRunsUpdatePostRequest**](Model20MlflowRunsUpdatePostRequest.md)> | Request body |  |
-
-### Return type
-
-[**models::Model20MlflowRunsUpdatePost200Response**](_2_0_mlflow_runs_update_post_200_response.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
-- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

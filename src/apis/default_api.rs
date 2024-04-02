@@ -15,341 +15,302 @@ use crate::{apis::ResponseContent, models};
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`call_20_mlflow_artifacts_list_get`]
+/// struct for typed errors of method [`mlflowservicecreateexperiment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowArtifactsListGetError {
+pub enum MlflowservicecreateexperimentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_create_post`]
+/// struct for typed errors of method [`mlflowservicecreaterun`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsCreatePostError {
+pub enum MlflowservicecreaterunError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_delete_post`]
+/// struct for typed errors of method [`mlflowservicedeleteexperiment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsDeletePostError {
+pub enum MlflowservicedeleteexperimentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_get_by_name_get`]
+/// struct for typed errors of method [`mlflowservicedeleterun`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsGetByNameGetError {
+pub enum MlflowservicedeleterunError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_get_get`]
+/// struct for typed errors of method [`mlflowservicedeletetag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsGetGetError {
+pub enum MlflowservicedeletetagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_restore_post`]
+/// struct for typed errors of method [`mlflowservicegetexperiment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsRestorePostError {
+pub enum MlflowservicegetexperimentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_search_post`]
+/// struct for typed errors of method [`mlflowservicegetexperimentbyname`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsSearchPostError {
+pub enum MlflowservicegetexperimentbynameError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_set_experiment_tag_post`]
+/// struct for typed errors of method [`mlflowservicegetmetrichistory`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsSetExperimentTagPostError {
+pub enum MlflowservicegetmetrichistoryError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_experiments_update_post`]
+/// struct for typed errors of method [`mlflowservicegetrun`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowExperimentsUpdatePostError {
+pub enum MlflowservicegetrunError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_metrics_get_history_get`]
+/// struct for typed errors of method [`mlflowservicelistartifacts`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowMetricsGetHistoryGetError {
+pub enum MlflowservicelistartifactsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_create_post`]
+/// struct for typed errors of method [`mlflowservicelogbatch`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsCreatePostError {
+pub enum MlflowservicelogbatchError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_delete_delete`]
+/// struct for typed errors of method [`mlflowserviceloginputs`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsDeleteDeleteError {
+pub enum MlflowserviceloginputsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_delete_tag_delete`]
+/// struct for typed errors of method [`mlflowservicelogmetric`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsDeleteTagDeleteError {
+pub enum MlflowservicelogmetricError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_get_download_uri_get`]
+/// struct for typed errors of method [`mlflowservicelogmodel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsGetDownloadUriGetError {
+pub enum MlflowservicelogmodelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_get_get`]
+/// struct for typed errors of method [`mlflowservicelogparam`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsGetGetError {
+pub enum MlflowservicelogparamError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_search_get`]
+/// struct for typed errors of method [`mlflowservicerestoreexperiment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsSearchGetError {
+pub enum MlflowservicerestoreexperimentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_set_tag_post`]
+/// struct for typed errors of method [`mlflowservicerestorerun`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsSetTagPostError {
+pub enum MlflowservicerestorerunError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_transition_stage_post`]
+/// struct for typed errors of method [`mlflowservicesearchexperiments`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsTransitionStagePostError {
+pub enum MlflowservicesearchexperimentsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_model_versions_update_patch`]
+/// struct for typed errors of method [`mlflowservicesearchruns`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowModelVersionsUpdatePatchError {
+pub enum MlflowservicesearchrunsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_alias_post`]
+/// struct for typed errors of method [`mlflowservicesetexperimenttag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsAliasPostError {
+pub enum MlflowservicesetexperimenttagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_create_post`]
+/// struct for typed errors of method [`mlflowservicesettag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsCreatePostError {
+pub enum MlflowservicesettagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_delete_delete`]
+/// struct for typed errors of method [`mlflowserviceupdateexperiment`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsDeleteDeleteError {
+pub enum MlflowserviceupdateexperimentError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_delete_tag_delete`]
+/// struct for typed errors of method [`mlflowserviceupdaterun`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsDeleteTagDeleteError {
+pub enum MlflowserviceupdaterunError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_get_get`]
+/// struct for typed errors of method [`modelregistryservicecreatemodelversion`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsGetGetError {
+pub enum ModelregistryservicecreatemodelversionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_get_latest_versions_post`]
+/// struct for typed errors of method [`modelregistryservicecreateregisteredmodel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsGetLatestVersionsPostError {
+pub enum ModelregistryservicecreateregisteredmodelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_rename_post`]
+/// struct for typed errors of method [`modelregistryservicedeletemodelversion`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsRenamePostError {
+pub enum ModelregistryservicedeletemodelversionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_search_get`]
+/// struct for typed errors of method [`modelregistryservicedeletemodelversiontag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsSearchGetError {
+pub enum ModelregistryservicedeletemodelversiontagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_set_tag_post`]
+/// struct for typed errors of method [`modelregistryservicedeleteregisteredmodel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsSetTagPostError {
+pub enum ModelregistryservicedeleteregisteredmodelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_registered_models_update_patch`]
+/// struct for typed errors of method [`modelregistryservicedeleteregisteredmodeltag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRegisteredModelsUpdatePatchError {
+pub enum ModelregistryservicedeleteregisteredmodeltagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_create_post`]
+/// struct for typed errors of method [`modelregistryservicegetlatestversions`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsCreatePostError {
+pub enum ModelregistryservicegetlatestversionsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_delete_post`]
+/// struct for typed errors of method [`modelregistryservicegetmodelversion`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsDeletePostError {
+pub enum ModelregistryservicegetmodelversionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_delete_tag_post`]
+/// struct for typed errors of method [`modelregistryservicegetmodelversiondownloaduri`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsDeleteTagPostError {
+pub enum ModelregistryservicegetmodelversiondownloaduriError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_get_get`]
+/// struct for typed errors of method [`modelregistryservicegetregisteredmodel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsGetGetError {
+pub enum ModelregistryservicegetregisteredmodelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_log_batch_post`]
+/// struct for typed errors of method [`modelregistryservicerenameregisteredmodel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsLogBatchPostError {
+pub enum ModelregistryservicerenameregisteredmodelError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_log_inputs_post`]
+/// struct for typed errors of method [`modelregistryservicesearchmodelversions`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsLogInputsPostError {
+pub enum ModelregistryservicesearchmodelversionsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_log_metric_post`]
+/// struct for typed errors of method [`modelregistryservicesearchregisteredmodels`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsLogMetricPostError {
+pub enum ModelregistryservicesearchregisteredmodelsError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_log_model_post`]
+/// struct for typed errors of method [`modelregistryservicesetmodelversiontag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsLogModelPostError {
+pub enum ModelregistryservicesetmodelversiontagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_log_parameter_post`]
+/// struct for typed errors of method [`modelregistryservicesetregisteredmodelalias`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsLogParameterPostError {
+pub enum ModelregistryservicesetregisteredmodelaliasError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_restore_post`]
+/// struct for typed errors of method [`modelregistryservicesetregisteredmodeltag`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsRestorePostError {
+pub enum ModelregistryservicesetregisteredmodeltagError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_search_post`]
+/// struct for typed errors of method [`modelregistryservicetransitionmodelversionstage`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsSearchPostError {
+pub enum ModelregistryservicetransitionmodelversionstageError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_set_tag_post`]
+/// struct for typed errors of method [`modelregistryserviceupdatemodelversion`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsSetTagPostError {
+pub enum ModelregistryserviceupdatemodelversionError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`call_20_mlflow_runs_update_post`]
+/// struct for typed errors of method [`modelregistryserviceupdateregisteredmodel`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum Call20MlflowRunsUpdatePostError {
+pub enum ModelregistryserviceupdateregisteredmodelError {
     UnknownValue(serde_json::Value),
 }
 
 
-pub async fn call_20_mlflow_artifacts_list_get(configuration: &configuration::Configuration, run_id: Option<&str>, run_uuid: Option<&str>, path: Option<&str>, page_token: Option<&str>) -> Result<models::Model20MlflowArtifactsListGet200Response, Error<Call20MlflowArtifactsListGetError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/artifacts/list", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_str) = run_id {
-        local_var_req_builder = local_var_req_builder.query(&[("run_id", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = run_uuid {
-        local_var_req_builder = local_var_req_builder.query(&[("run_uuid", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = path {
-        local_var_req_builder = local_var_req_builder.query(&[("path", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = page_token {
-        local_var_req_builder = local_var_req_builder.query(&[("page_token", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowArtifactsListGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_experiments_create_post(configuration: &configuration::Configuration, model20_mlflow_experiments_create_post_request: models::Model20MlflowExperimentsCreatePostRequest) -> Result<models::Model20MlflowExperimentsCreatePost200Response, Error<Call20MlflowExperimentsCreatePostError>> {
+pub async fn mlflowservicecreateexperiment(configuration: &configuration::Configuration, mlflowservicecreateexperiment_request: models::MlflowservicecreateexperimentRequest) -> Result<models::Mlflowservicecreateexperiment200Response, Error<MlflowservicecreateexperimentError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -360,7 +321,7 @@ pub async fn call_20_mlflow_experiments_create_post(configuration: &configuratio
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_create_post_request);
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicecreateexperiment_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -371,13 +332,41 @@ pub async fn call_20_mlflow_experiments_create_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowExperimentsCreatePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicecreateexperimentError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_experiments_delete_post(configuration: &configuration::Configuration, model20_mlflow_experiments_delete_post_request: models::Model20MlflowExperimentsDeletePostRequest) -> Result<(), Error<Call20MlflowExperimentsDeletePostError>> {
+pub async fn mlflowservicecreaterun(configuration: &configuration::Configuration, mlflowservicecreaterun_request: Option<models::MlflowservicecreaterunRequest>) -> Result<models::Mlflowservicecreaterun200Response, Error<MlflowservicecreaterunError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/create", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicecreaterun_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<MlflowservicecreaterunError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicedeleteexperiment(configuration: &configuration::Configuration, mlflowservicedeleteexperiment_request: models::MlflowservicedeleteexperimentRequest) -> Result<(), Error<MlflowservicedeleteexperimentError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -388,7 +377,7 @@ pub async fn call_20_mlflow_experiments_delete_post(configuration: &configuratio
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_delete_post_request);
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicedeleteexperiment_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -399,24 +388,24 @@ pub async fn call_20_mlflow_experiments_delete_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         Ok(())
     } else {
-        let local_var_entity: Option<Call20MlflowExperimentsDeletePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicedeleteexperimentError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_experiments_get_by_name_get(configuration: &configuration::Configuration, experiment_name: &str) -> Result<models::Model20MlflowExperimentsGetGet200Response, Error<Call20MlflowExperimentsGetByNameGetError>> {
+pub async fn mlflowservicedeleterun(configuration: &configuration::Configuration, mlflowservicedeleterun_request: models::MlflowservicedeleterunRequest) -> Result<(), Error<MlflowservicedeleterunError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/get-by-name", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/delete", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
 
-    local_var_req_builder = local_var_req_builder.query(&[("experiment_name", &experiment_name.to_string())]);
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicedeleterun_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -425,15 +414,43 @@ pub async fn call_20_mlflow_experiments_get_by_name_get(configuration: &configur
     let local_var_content = local_var_resp.text().await?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
+        Ok(())
     } else {
-        let local_var_entity: Option<Call20MlflowExperimentsGetByNameGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicedeleterunError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_experiments_get_get(configuration: &configuration::Configuration, experiment_id: &str) -> Result<models::Model20MlflowExperimentsGetGet200Response, Error<Call20MlflowExperimentsGetGetError>> {
+pub async fn mlflowservicedeletetag(configuration: &configuration::Configuration, mlflowservicedeletetag_request: models::MlflowservicedeletetagRequest) -> Result<(), Error<MlflowservicedeletetagError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/delete-tag", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicedeletetag_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicedeletetagError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicegetexperiment(configuration: &configuration::Configuration, experiment_id: &str) -> Result<models::Mlflowservicegetexperiment200Response, Error<MlflowservicegetexperimentError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -455,52 +472,24 @@ pub async fn call_20_mlflow_experiments_get_get(configuration: &configuration::C
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowExperimentsGetGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicegetexperimentError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_experiments_restore_post(configuration: &configuration::Configuration, model20_mlflow_experiments_delete_post_request: models::Model20MlflowExperimentsDeletePostRequest) -> Result<(), Error<Call20MlflowExperimentsRestorePostError>> {
+pub async fn mlflowservicegetexperimentbyname(configuration: &configuration::Configuration, experiment_name: &str) -> Result<models::Mlflowservicegetexperiment200Response, Error<MlflowservicegetexperimentbynameError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/restore", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/get-by-name", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
+    local_var_req_builder = local_var_req_builder.query(&[("experiment_name", &experiment_name.to_string())]);
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_delete_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowExperimentsRestorePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_experiments_search_post(configuration: &configuration::Configuration, model20_mlflow_experiments_search_post_request: Option<models::Model20MlflowExperimentsSearchPostRequest>) -> Result<models::Model20MlflowExperimentsSearchPost200Response, Error<Call20MlflowExperimentsSearchPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/search", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_search_post_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -511,69 +500,13 @@ pub async fn call_20_mlflow_experiments_search_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowExperimentsSearchPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicegetexperimentbynameError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_experiments_set_experiment_tag_post(configuration: &configuration::Configuration, model20_mlflow_experiments_set_experiment_tag_post_request: models::Model20MlflowExperimentsSetExperimentTagPostRequest) -> Result<(), Error<Call20MlflowExperimentsSetExperimentTagPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/set-experiment-tag", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_set_experiment_tag_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowExperimentsSetExperimentTagPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_experiments_update_post(configuration: &configuration::Configuration, model20_mlflow_experiments_update_post_request: models::Model20MlflowExperimentsUpdatePostRequest) -> Result<(), Error<Call20MlflowExperimentsUpdatePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/update", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_experiments_update_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowExperimentsUpdatePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_metrics_get_history_get(configuration: &configuration::Configuration, metric_key: &str, run_id: Option<&str>, run_uuid: Option<&str>, page_token: Option<&str>, max_results: Option<i32>) -> Result<models::Model20MlflowMetricsGetHistoryGet200Response, Error<Call20MlflowMetricsGetHistoryGetError>> {
+pub async fn mlflowservicegetmetrichistory(configuration: &configuration::Configuration, metric_key: &str, run_id: Option<&str>, run_uuid: Option<&str>, page_token: Option<&str>, max_results: Option<i32>) -> Result<models::Mlflowservicegetmetrichistory200Response, Error<MlflowservicegetmetrichistoryError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -607,24 +540,29 @@ pub async fn call_20_mlflow_metrics_get_history_get(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowMetricsGetHistoryGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicegetmetrichistoryError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_create_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_create_post_request: models::Model20MlflowModelVersionsCreatePostRequest) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsCreatePostError>> {
+pub async fn mlflowservicegetrun(configuration: &configuration::Configuration, run_id: Option<&str>, run_uuid: Option<&str>) -> Result<models::Mlflowservicecreaterun200Response, Error<MlflowservicegetrunError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/create", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/get", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
 
+    if let Some(ref local_var_str) = run_id {
+        local_var_req_builder = local_var_req_builder.query(&[("run_id", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_str) = run_uuid {
+        local_var_req_builder = local_var_req_builder.query(&[("run_uuid", &local_var_str.to_string())]);
+    }
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_model_versions_create_post_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -635,13 +573,472 @@ pub async fn call_20_mlflow_model_versions_create_post(configuration: &configura
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsCreatePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<MlflowservicegetrunError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_delete_delete(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<(), Error<Call20MlflowModelVersionsDeleteDeleteError>> {
+pub async fn mlflowservicelistartifacts(configuration: &configuration::Configuration, run_id: Option<&str>, run_uuid: Option<&str>, path: Option<&str>, page_token: Option<&str>) -> Result<models::Mlflowservicelistartifacts200Response, Error<MlflowservicelistartifactsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/artifacts/list", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_str) = run_id {
+        local_var_req_builder = local_var_req_builder.query(&[("run_id", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_str) = run_uuid {
+        local_var_req_builder = local_var_req_builder.query(&[("run_uuid", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_str) = path {
+        local_var_req_builder = local_var_req_builder.query(&[("path", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_str) = page_token {
+        local_var_req_builder = local_var_req_builder.query(&[("page_token", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<MlflowservicelistartifactsError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicelogbatch(configuration: &configuration::Configuration, mlflowservicelogbatch_request: Option<models::MlflowservicelogbatchRequest>) -> Result<(), Error<MlflowservicelogbatchError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-batch", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicelogbatch_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicelogbatchError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowserviceloginputs(configuration: &configuration::Configuration, mlflowserviceloginputs_request: models::MlflowserviceloginputsRequest) -> Result<(), Error<MlflowserviceloginputsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-inputs", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowserviceloginputs_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowserviceloginputsError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicelogmetric(configuration: &configuration::Configuration, mlflowservicelogmetric_request: models::MlflowservicelogmetricRequest) -> Result<(), Error<MlflowservicelogmetricError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-metric", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicelogmetric_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicelogmetricError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicelogmodel(configuration: &configuration::Configuration, mlflowservicelogmodel_request: Option<models::MlflowservicelogmodelRequest>) -> Result<(), Error<MlflowservicelogmodelError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-model", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicelogmodel_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicelogmodelError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicelogparam(configuration: &configuration::Configuration, mlflowservicelogparam_request: models::MlflowservicelogparamRequest) -> Result<(), Error<MlflowservicelogparamError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-parameter", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicelogparam_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicelogparamError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicerestoreexperiment(configuration: &configuration::Configuration, mlflowservicedeleteexperiment_request: models::MlflowservicedeleteexperimentRequest) -> Result<(), Error<MlflowservicerestoreexperimentError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/restore", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicedeleteexperiment_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicerestoreexperimentError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicerestorerun(configuration: &configuration::Configuration, mlflowservicerestorerun_request: models::MlflowservicerestorerunRequest) -> Result<(), Error<MlflowservicerestorerunError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/restore", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicerestorerun_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicerestorerunError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicesearchexperiments(configuration: &configuration::Configuration, mlflowservicesearchexperiments_request: Option<models::MlflowservicesearchexperimentsRequest>) -> Result<models::Mlflowservicesearchexperiments200Response, Error<MlflowservicesearchexperimentsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/search", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicesearchexperiments_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<MlflowservicesearchexperimentsError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicesearchruns(configuration: &configuration::Configuration, mlflowservicesearchruns_request: Option<models::MlflowservicesearchrunsRequest>) -> Result<models::Mlflowservicesearchruns200Response, Error<MlflowservicesearchrunsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/search", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicesearchruns_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<MlflowservicesearchrunsError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicesetexperimenttag(configuration: &configuration::Configuration, mlflowservicesetexperimenttag_request: models::MlflowservicesetexperimenttagRequest) -> Result<(), Error<MlflowservicesetexperimenttagError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/set-experiment-tag", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicesetexperimenttag_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicesetexperimenttagError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowservicesettag(configuration: &configuration::Configuration, mlflowservicesettag_request: models::MlflowservicesettagRequest) -> Result<(), Error<MlflowservicesettagError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/set-tag", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowservicesettag_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowservicesettagError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowserviceupdateexperiment(configuration: &configuration::Configuration, mlflowserviceupdateexperiment_request: models::MlflowserviceupdateexperimentRequest) -> Result<(), Error<MlflowserviceupdateexperimentError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/experiments/update", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowserviceupdateexperiment_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<MlflowserviceupdateexperimentError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn mlflowserviceupdaterun(configuration: &configuration::Configuration, mlflowserviceupdaterun_request: Option<models::MlflowserviceupdaterunRequest>) -> Result<models::Mlflowserviceupdaterun200Response, Error<MlflowserviceupdaterunError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/runs/update", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&mlflowserviceupdaterun_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<MlflowserviceupdaterunError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicecreatemodelversion(configuration: &configuration::Configuration, modelregistryservicecreatemodelversion_request: models::ModelregistryservicecreatemodelversionRequest) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryservicecreatemodelversionError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/create", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicecreatemodelversion_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicecreatemodelversionError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicecreateregisteredmodel(configuration: &configuration::Configuration, modelregistryservicecreateregisteredmodel_request: models::ModelregistryservicecreateregisteredmodelRequest) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryservicecreateregisteredmodelError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/create", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicecreateregisteredmodel_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicecreateregisteredmodelError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicedeletemodelversion(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<(), Error<ModelregistryservicedeletemodelversionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -664,13 +1061,13 @@ pub async fn call_20_mlflow_model_versions_delete_delete(configuration: &configu
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         Ok(())
     } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsDeleteDeleteError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicedeletemodelversionError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_delete_tag_delete(configuration: &configuration::Configuration, name: &str, version: &str, key: &str) -> Result<(), Error<Call20MlflowModelVersionsDeleteTagDeleteError>> {
+pub async fn modelregistryservicedeletemodelversiontag(configuration: &configuration::Configuration, name: &str, version: &str, key: &str) -> Result<(), Error<ModelregistryservicedeletemodelversiontagError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -694,22 +1091,21 @@ pub async fn call_20_mlflow_model_versions_delete_tag_delete(configuration: &con
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         Ok(())
     } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsDeleteTagDeleteError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicedeletemodelversiontagError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_get_download_uri_get(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<models::Model20MlflowModelVersionsGetDownloadUriGet200Response, Error<Call20MlflowModelVersionsGetDownloadUriGetError>> {
+pub async fn modelregistryservicedeleteregisteredmodel(configuration: &configuration::Configuration, name: &str) -> Result<(), Error<ModelregistryservicedeleteregisteredmodelError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/get-download-uri", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/delete", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
 
     local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
-    local_var_req_builder = local_var_req_builder.query(&[("version", &version.to_string())]);
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
@@ -721,15 +1117,72 @@ pub async fn call_20_mlflow_model_versions_get_download_uri_get(configuration: &
     let local_var_content = local_var_resp.text().await?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
+        Ok(())
     } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsGetDownloadUriGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicedeleteregisteredmodelError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_get_get(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsGetGetError>> {
+pub async fn modelregistryservicedeleteregisteredmodeltag(configuration: &configuration::Configuration, name: &str, key: &str) -> Result<(), Error<ModelregistryservicedeleteregisteredmodeltagError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/delete-tag", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
+    local_var_req_builder = local_var_req_builder.query(&[("key", &key.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<ModelregistryservicedeleteregisteredmodeltagError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicegetlatestversions(configuration: &configuration::Configuration, modelregistryservicegetlatestversions_request: models::ModelregistryservicegetlatestversionsRequest) -> Result<models::Modelregistryservicegetlatestversions200Response, Error<ModelregistryservicegetlatestversionsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/get-latest-versions", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicegetlatestversions_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicegetlatestversionsError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicegetmodelversion(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryservicegetmodelversionError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -752,13 +1205,98 @@ pub async fn call_20_mlflow_model_versions_get_get(configuration: &configuration
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsGetGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicegetmodelversionError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_search_get(configuration: &configuration::Configuration, filter: Option<&str>, max_results: Option<i64>, order_by: Option<Vec<String>>, page_token: Option<&str>) -> Result<models::Model20MlflowModelVersionsSearchGet200Response, Error<Call20MlflowModelVersionsSearchGetError>> {
+pub async fn modelregistryservicegetmodelversiondownloaduri(configuration: &configuration::Configuration, name: &str, version: &str) -> Result<models::Modelregistryservicegetmodelversiondownloaduri200Response, Error<ModelregistryservicegetmodelversiondownloaduriError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/get-download-uri", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
+    local_var_req_builder = local_var_req_builder.query(&[("version", &version.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicegetmodelversiondownloaduriError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicegetregisteredmodel(configuration: &configuration::Configuration, name: &str) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryservicegetregisteredmodelError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/get", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicegetregisteredmodelError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicerenameregisteredmodel(configuration: &configuration::Configuration, modelregistryservicerenameregisteredmodel_request: models::ModelregistryservicerenameregisteredmodelRequest) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryservicerenameregisteredmodelError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/rename", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicerenameregisteredmodel_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicerenameregisteredmodelError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicesearchmodelversions(configuration: &configuration::Configuration, filter: Option<&str>, max_results: Option<i64>, order_by: Option<Vec<String>>, page_token: Option<&str>) -> Result<models::Modelregistryservicesearchmodelversions200Response, Error<ModelregistryservicesearchmodelversionsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -794,298 +1332,13 @@ pub async fn call_20_mlflow_model_versions_search_get(configuration: &configurat
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsSearchGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicesearchmodelversionsError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_model_versions_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_set_tag_post_request: models::Model20MlflowModelVersionsSetTagPostRequest) -> Result<(), Error<Call20MlflowModelVersionsSetTagPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/set-tag", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_model_versions_set_tag_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsSetTagPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_model_versions_transition_stage_post(configuration: &configuration::Configuration, model20_mlflow_model_versions_transition_stage_post_request: models::Model20MlflowModelVersionsTransitionStagePostRequest) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsTransitionStagePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/transition-stage", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_model_versions_transition_stage_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsTransitionStagePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_model_versions_update_patch(configuration: &configuration::Configuration, name: &str, version: &str, description: Option<&str>) -> Result<models::Model20MlflowModelVersionsCreatePost200Response, Error<Call20MlflowModelVersionsUpdatePatchError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/update", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PATCH, local_var_uri_str.as_str());
-
-    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
-    local_var_req_builder = local_var_req_builder.query(&[("version", &version.to_string())]);
-    if let Some(ref local_var_str) = description {
-        local_var_req_builder = local_var_req_builder.query(&[("description", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowModelVersionsUpdatePatchError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_alias_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_alias_post_request: models::Model20MlflowRegisteredModelsAliasPostRequest) -> Result<(), Error<Call20MlflowRegisteredModelsAliasPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/alias", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_registered_models_alias_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsAliasPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_create_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_create_post_request: models::Model20MlflowRegisteredModelsCreatePostRequest) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsCreatePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/create", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_registered_models_create_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsCreatePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_delete_delete(configuration: &configuration::Configuration, name: &str) -> Result<(), Error<Call20MlflowRegisteredModelsDeleteDeleteError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/delete", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
-
-    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsDeleteDeleteError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_delete_tag_delete(configuration: &configuration::Configuration, name: &str, key: &str) -> Result<(), Error<Call20MlflowRegisteredModelsDeleteTagDeleteError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/delete-tag", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
-
-    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
-    local_var_req_builder = local_var_req_builder.query(&[("key", &key.to_string())]);
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsDeleteTagDeleteError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_get_get(configuration: &configuration::Configuration, name: &str) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsGetGetError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/get", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
-
-    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsGetGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_get_latest_versions_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_get_latest_versions_post_request: models::Model20MlflowRegisteredModelsGetLatestVersionsPostRequest) -> Result<models::Model20MlflowRegisteredModelsGetLatestVersionsPost200Response, Error<Call20MlflowRegisteredModelsGetLatestVersionsPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/get-latest-versions", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_registered_models_get_latest_versions_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsGetLatestVersionsPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_rename_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_rename_post_request: models::Model20MlflowRegisteredModelsRenamePostRequest) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsRenamePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/rename", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_registered_models_rename_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsRenamePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_registered_models_search_get(configuration: &configuration::Configuration, filter: Option<&str>, max_results: Option<i64>, order_by: Option<Vec<String>>, page_token: Option<&str>) -> Result<models::Model20MlflowRegisteredModelsSearchGet200Response, Error<Call20MlflowRegisteredModelsSearchGetError>> {
+pub async fn modelregistryservicesearchregisteredmodels(configuration: &configuration::Configuration, filter: Option<&str>, max_results: Option<i64>, order_by: Option<Vec<String>>, page_token: Option<&str>) -> Result<models::Modelregistryservicesearchregisteredmodels200Response, Error<ModelregistryservicesearchregisteredmodelsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1121,24 +1374,24 @@ pub async fn call_20_mlflow_registered_models_search_get(configuration: &configu
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsSearchGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicesearchregisteredmodelsError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_registered_models_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_registered_models_set_tag_post_request: models::Model20MlflowRegisteredModelsSetTagPostRequest) -> Result<(), Error<Call20MlflowRegisteredModelsSetTagPostError>> {
+pub async fn modelregistryservicesetmodelversiontag(configuration: &configuration::Configuration, modelregistryservicesetmodelversiontag_request: models::ModelregistryservicesetmodelversiontagRequest) -> Result<(), Error<ModelregistryservicesetmodelversiontagError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/set-tag", local_var_configuration.base_path);
+    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/set-tag", local_var_configuration.base_path);
     let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
 
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_registered_models_set_tag_post_request);
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicesetmodelversiontag_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -1149,13 +1402,129 @@ pub async fn call_20_mlflow_registered_models_set_tag_post(configuration: &confi
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         Ok(())
     } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsSetTagPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryservicesetmodelversiontagError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
-pub async fn call_20_mlflow_registered_models_update_patch(configuration: &configuration::Configuration, name: &str, description: Option<&str>) -> Result<models::Model20MlflowRegisteredModelsCreatePost200Response, Error<Call20MlflowRegisteredModelsUpdatePatchError>> {
+pub async fn modelregistryservicesetregisteredmodelalias(configuration: &configuration::Configuration, modelregistryservicesetregisteredmodelalias_request: models::ModelregistryservicesetregisteredmodelaliasRequest) -> Result<(), Error<ModelregistryservicesetregisteredmodelaliasError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/alias", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicesetregisteredmodelalias_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<ModelregistryservicesetregisteredmodelaliasError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicesetregisteredmodeltag(configuration: &configuration::Configuration, modelregistryservicesetregisteredmodeltag_request: models::ModelregistryservicesetregisteredmodeltagRequest) -> Result<(), Error<ModelregistryservicesetregisteredmodeltagError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/registered-models/set-tag", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicesetregisteredmodeltag_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        Ok(())
+    } else {
+        let local_var_entity: Option<ModelregistryservicesetregisteredmodeltagError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryservicetransitionmodelversionstage(configuration: &configuration::Configuration, modelregistryservicetransitionmodelversionstage_request: models::ModelregistryservicetransitionmodelversionstageRequest) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryservicetransitionmodelversionstageError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/transition-stage", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    local_var_req_builder = local_var_req_builder.json(&modelregistryservicetransitionmodelversionstage_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryservicetransitionmodelversionstageError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryserviceupdatemodelversion(configuration: &configuration::Configuration, name: &str, version: &str, description: Option<&str>) -> Result<models::Modelregistryservicecreatemodelversion200Response, Error<ModelregistryserviceupdatemodelversionError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/2.0/mlflow/model-versions/update", local_var_configuration.base_path);
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PATCH, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("name", &name.to_string())]);
+    local_var_req_builder = local_var_req_builder.query(&[("version", &version.to_string())]);
+    if let Some(ref local_var_str) = description {
+        local_var_req_builder = local_var_req_builder.query(&[("description", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ModelregistryserviceupdatemodelversionError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+pub async fn modelregistryserviceupdateregisteredmodel(configuration: &configuration::Configuration, name: &str, description: Option<&str>) -> Result<models::Modelregistryservicecreateregisteredmodel200Response, Error<ModelregistryserviceupdateregisteredmodelError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -1180,376 +1549,7 @@ pub async fn call_20_mlflow_registered_models_update_patch(configuration: &confi
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<Call20MlflowRegisteredModelsUpdatePatchError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_create_post(configuration: &configuration::Configuration, model20_mlflow_runs_create_post_request: Option<models::Model20MlflowRunsCreatePostRequest>) -> Result<models::Model20MlflowRunsCreatePost200Response, Error<Call20MlflowRunsCreatePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/create", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_create_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsCreatePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_delete_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_post_request: models::Model20MlflowRunsDeletePostRequest) -> Result<(), Error<Call20MlflowRunsDeletePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/delete", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_delete_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsDeletePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_delete_tag_post(configuration: &configuration::Configuration, model20_mlflow_runs_delete_tag_post_request: models::Model20MlflowRunsDeleteTagPostRequest) -> Result<(), Error<Call20MlflowRunsDeleteTagPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/delete-tag", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_delete_tag_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsDeleteTagPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_get_get(configuration: &configuration::Configuration, run_id: Option<&str>, run_uuid: Option<&str>) -> Result<models::Model20MlflowRunsCreatePost200Response, Error<Call20MlflowRunsGetGetError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/get", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_str) = run_id {
-        local_var_req_builder = local_var_req_builder.query(&[("run_id", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_str) = run_uuid {
-        local_var_req_builder = local_var_req_builder.query(&[("run_uuid", &local_var_str.to_string())]);
-    }
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsGetGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_log_batch_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_batch_post_request: Option<models::Model20MlflowRunsLogBatchPostRequest>) -> Result<(), Error<Call20MlflowRunsLogBatchPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-batch", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_log_batch_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsLogBatchPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_log_inputs_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_inputs_post_request: models::Model20MlflowRunsLogInputsPostRequest) -> Result<(), Error<Call20MlflowRunsLogInputsPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-inputs", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_log_inputs_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsLogInputsPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_log_metric_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_metric_post_request: models::Model20MlflowRunsLogMetricPostRequest) -> Result<(), Error<Call20MlflowRunsLogMetricPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-metric", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_log_metric_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsLogMetricPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_log_model_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_model_post_request: Option<models::Model20MlflowRunsLogModelPostRequest>) -> Result<(), Error<Call20MlflowRunsLogModelPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-model", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_log_model_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsLogModelPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_log_parameter_post(configuration: &configuration::Configuration, model20_mlflow_runs_log_parameter_post_request: models::Model20MlflowRunsLogParameterPostRequest) -> Result<(), Error<Call20MlflowRunsLogParameterPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/log-parameter", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_log_parameter_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsLogParameterPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_restore_post(configuration: &configuration::Configuration, model20_mlflow_runs_restore_post_request: models::Model20MlflowRunsRestorePostRequest) -> Result<(), Error<Call20MlflowRunsRestorePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/restore", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_restore_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsRestorePostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_search_post(configuration: &configuration::Configuration, model20_mlflow_runs_search_post_request: Option<models::Model20MlflowRunsSearchPostRequest>) -> Result<models::Model20MlflowRunsSearchPost200Response, Error<Call20MlflowRunsSearchPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/search", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_search_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsSearchPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_set_tag_post(configuration: &configuration::Configuration, model20_mlflow_runs_set_tag_post_request: models::Model20MlflowRunsSetTagPostRequest) -> Result<(), Error<Call20MlflowRunsSetTagPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/set-tag", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_set_tag_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        Ok(())
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsSetTagPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-pub async fn call_20_mlflow_runs_update_post(configuration: &configuration::Configuration, model20_mlflow_runs_update_post_request: Option<models::Model20MlflowRunsUpdatePostRequest>) -> Result<models::Model20MlflowRunsUpdatePost200Response, Error<Call20MlflowRunsUpdatePostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/2.0/mlflow/runs/update", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    local_var_req_builder = local_var_req_builder.json(&model20_mlflow_runs_update_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<Call20MlflowRunsUpdatePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ModelregistryserviceupdateregisteredmodelError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
